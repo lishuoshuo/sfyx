@@ -1,0 +1,2173 @@
+@import "rest";
+@import "mixin";
+@import "extend";
+@import "variable";
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    vertical-align: middle;
+}
+
+body {
+    @at-root {
+        .topMenu {
+            height: 33px;
+            width: $width;
+            border-bottom: 1px solid $color2;
+            background: $color1;
+            >.pW {
+                height: $height;
+                width: $widths;
+                line-height: 33px;
+                @include marginAuto();
+                >.fl {
+                    height: $height;
+                    @extend %float-left;
+                    @extend %legacy-pie-clearfix;
+                    >li {
+                        height: $height;
+                        @extend %float-left;
+                        >p {
+                            height: 20px;
+                            width: 50px;
+                            line-height: 20px;
+                            border: 1px solid $color4;
+                            @include margin(6px 0 0);
+                            >span {
+                                @include margin(0 0 0 3px)
+                            }
+                        }
+                    }
+                }
+                >.fr {
+                    @extend %float-right;
+                    >li {
+                        @extend %float-left;
+                        padding: 0 10px;
+                        color: $color5;
+                        position: relative;
+                        line-height: 33px;
+                        >ul {
+                            display: none;
+                            z-index: 100;
+                        }
+                        >a {
+                            color: $color3;
+                        }
+                        &:hover>a {
+                            color: $co13;
+                        }
+                        &.frMy {
+                            width: 60px;
+                            position: relative;
+                            >b {
+                                position: absolute;
+                                right: 12px;
+                                top: 15px;
+                                background: url(../images/header.png) no-repeat -86px -130px;
+                                width: 8px;
+                                height: 4px;
+                                transition: transform .2s ease-in 0s;
+                                -webkit-transition: -webkit-transform .2s ease-in 0s;
+                                overflow: hidden;
+                            }
+                            &:hover b {
+                                transform: rotate(180deg);
+                                -webkit-transform: rotate(180deg);
+                            }
+                            &:hover>ul {
+                                box-shadow: 0 0 5px $co40;
+                            }
+                            >ul {
+                                position: absolute;
+                                top: 1px;
+                                padding-top: 33px;
+                                width: 80px;
+                                left: 0px; //background: red;
+                                text-align: center;
+                                >li {
+                                    line-height: 22px;
+                                    background: $co10;
+                                    >a {
+                                        color: $color3;
+                                    }
+                                }
+                            }
+                        }
+                        &.phones {
+                            padding: 0 10px 0 28px;
+                            >b {
+                                background: url(../images/header.png) no-repeat -73px -122px;
+                                width: 10px;
+                                left: 10px;
+                                transition: all 0.2s ease 0s;
+                                display: block;
+                                height: 16px;
+                                position: absolute;
+                                top: 9px;
+                            }
+                            &:hover b {
+                                background: url(../images/header.png) no-repeat -73px -138px;
+                            }
+                            >h3 {
+                                position: absolute;
+                                top: 24px;
+                                left: 50px;
+                                z-index: 2;
+                            }
+                            &:hover h3 {
+                                border-bottom: 10px solid $co10;
+                                border-left: 10px dashed $color1;
+                                border-right: 10px dashed $color1;
+                            }
+                            >ul {
+                                cursor: pointer;
+                                position: absolute;
+                                top: 33px;
+                                width: 230px;
+                                left: -50px;
+                                height: 153px;
+                                padding: 15px 0 0 0;
+                                border: 1px solid $color4;
+                                background: $co10;
+                                >.phones_one {
+                                    width: 215px;
+                                    height: 74px;
+                                    margin-bottom: 10px;
+                                    margin-left: 15px;
+                                    position: relative;
+                                    >span {
+                                        width: 73px;
+                                        height: 74px;
+                                        overflow: hidden;
+                                        background: url(../images/header.png) no-repeat 0 -93px;
+                                        display: block;
+                                    }
+                                    >i {
+                                        position: absolute;
+                                        width: 50px;
+                                        height: 29px;
+                                        left: 80px;
+                                        top: 5px;
+                                        background: url(../images/header.png) no-repeat -73px -93px;
+                                        display: block;
+                                    }
+                                    >p {
+                                        position: absolute;
+                                        left: 95px;
+                                        top: 34px;
+                                        >em {
+                                            display: block;
+                                            line-height: 20px;
+                                        }
+                                        >strong {
+                                            display: block;
+                                            color: $co13;
+                                            line-height: 20px;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+                                >.phones_two {
+                                    font-size: 0;
+                                    height: 29px;
+                                    width: 215px;
+                                    margin: 0 0 10px 15px;
+                                    @extend %legacy-pie-clearfix;
+                                    >.apple {
+                                        @extend %float-left;
+                                        display: block;
+                                        width: 96px;
+                                        height: 29px;
+                                        background: url(../images/header.png) no-repeat 0 -167px;
+                                        margin-right: 5px;
+                                    }
+                                    >.android {
+                                        @extend %float-left;
+                                        display: block;
+                                        width: 96px;
+                                        height: 29px;
+                                        background: url(../images/header.png) no-repeat 0 -196px;
+                                    }
+                                }
+                                >.phones_three {
+                                    height: 30px;
+                                    background: url(../images/indexImg20130307.png) no-repeat -182px -210px #fcfbe4;
+                                    text-align: center;
+                                    color: $co21;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    line-height: 30px;
+                                    >a {
+                                        color: $co21;
+                                    }
+                                }
+                            }
+                        }
+                        &.menus {
+                            width: 60px;
+                        }
+                        &.tShow {
+                            height: 33px;
+                            width: 30px;
+                            padding: 0; //position: relative;
+                            >a {
+                                height: 16px;
+                                @include margin(9px 0 0 11px);
+                                width: 19px;
+                                display: block; //position: absolute;
+                                >p {
+                                    height: 16px;
+                                    &.wei {
+                                        background: url(../images/header.png) no-repeat -55px 0;
+                                    }
+                                    &.bo {
+                                        background: url(../images/header.png) no-repeat -74px 0;
+                                    }
+                                }
+                            }
+                        }
+                        &.allCat {
+                            padding: 0 15px;
+                            cursor: default;
+                            >b {
+                                position: absolute;
+                                right: 5px;
+                                top: 15px;
+                                background: url(../images/header.png) no-repeat -86px -130px;
+                                width: 8px;
+                                height: 4px;
+                                transition: transform .2s ease-in 0s;
+                                -webkit-transition: -webkit-transform .2s ease-in 0s;
+                                overflow: hidden;
+                            }
+                            &:hover {
+                                box-shadow: 0 0 5px $co40;
+                                b {
+                                    transform: rotate(180deg);
+                                    -webkit-transform: rotate(180deg);
+                                }
+                            }
+                            >ul {
+                                position: absolute;
+                                top: 33px;
+                                width: 815px;
+                                right: 0;
+                                height: 154px;
+                                left: auto;
+                                padding-top: 10px;
+                                -moz-box-shadow: 0 0 5px $co40;
+                                -webkit-box-shadow: 0 0 5px $co40;
+                                box-shadow: 0 0 5px $co40;
+                                background: $co10;
+                                @extend %legacy-pie-clearfix;
+                                >li {
+                                    @extend %float-left;
+                                    width: 200px;
+                                    padding: 15px 19px 0 20px;
+                                    text-align: left;
+                                    margin-bottom: 10px;
+                                    &.borderLi {
+                                        background: url(../images/line.jpg) center repeat-y;
+                                        height: 90px;
+                                        width: 5px;
+                                        margin: 20px 0 0 0;
+                                        padding: 15px 19px 0 20px;
+                                    }
+                                    >h3 {
+                                        @include YaHei16;
+                                        margin-bottom: 5px;
+                                        &.li1 {
+                                            color: $color6;
+                                        }
+                                        &.li2 {
+                                            color: $co21;
+                                        }
+                                        &.li3 {
+                                            color: $co37;
+                                        }
+                                    }
+                                    >p {
+                                        line-height: 20px;
+                                        height: 100px;
+                                        overflow: hidden;
+                                        >a {
+                                            display: block;
+                                            width: 65px;
+                                            @extend %float-left;
+                                            line-height: 30px;
+                                            color: #666666;
+                                        }
+                                        >i {
+                                            @extend %float-left;
+                                            width: 100%;
+                                            display: block;
+                                            line-height: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @at-root {
+        .header {
+            @extend %legacy-pie-clearfix;
+            height: 104px;
+            width: $widths;
+            @include marginAuto();
+            >.logo {
+                padding-top: 5px;
+                height: 99px;
+                width: 240px;
+                @extend %float-left;
+                >a {
+                    height: $height;
+                    width: $width;
+                    display: block;
+                    >.logoOne {
+                        height: 66px;
+                        width: $width;
+                        @extend %legacy-pie-clearfix;
+                        >p {
+                            @extend %float-left;
+                            height: $height;
+                            display: inline-block;
+                            >img {
+                                height: $height;
+                                width: $width;
+                            }
+                            &.logol {
+                                width: 124px;
+                                background: url(../images/indexImg20130307.png) -33px 0px no-repeat;
+                            }
+                            &.logor {
+                                width: 116px;
+                                background: url(../images/indexImg20130307.png) -160px 0px no-repeat;
+                            }
+                        }
+                    }
+                    >p.logoTwo {
+                        @include margin(2px 0 0 0);
+                        height: 25px;
+                        width: $width;
+                    }
+                }
+            }
+            >.playLogo {
+                @extend %float-left;
+                @include margin(15px 0 0 30px);
+                width: 140px;
+                height: 75px;
+            }
+            >.search {
+                @extend %float-left;
+                width: 514px;
+                height: 58px;
+                @include margin(28px 0 0 30px);
+                >form {
+                    height: 36px;
+                    width: $width;
+                    height: 36px;
+                    display: block;
+                    >input {
+                        @extend %float-left;
+                        cursor: pointer;
+                        &.inputl {
+                            height: 34px;
+                            width: 428px;
+                            border: 1px solid $color6;
+                            padding: 0 0 0 4px;
+                        }
+                        &.inputr {
+                            width: 80px;
+                            height: 36px;
+                            border: none;
+                            margin: 0px;
+                            float: left;
+                            vertical-align: middle;
+                            background: url(../images/header.png) no-repeat -99px -179px;
+                            color: $color8;
+                        }
+                    }
+                }
+                >.search_hot {
+                    padding: 4px 0px 0px 0px;
+                    height: 18px;
+                    @include arial;
+                    >a {
+                        color: $color7;
+                        @include margin(0 8px 0 0);
+                    }
+                }
+            }
+            >.shopingcar {
+                @include margin(28px 0 0 0);
+                width: 146px;
+                padding-left: 48px;
+                height: 36px;
+                border: 1px solid $color8;
+                @extend %float-right;
+                position: relative;
+                >.setCart {
+                    background: url(../images/header.png) no-repeat -102px -235px;
+                    margin: 6px 0 0 0;
+                    width: 23px;
+                    height: 21px;
+                    left: 17px;
+                    position: absolute;
+                    top: 4px;
+                }
+                >a {
+                    color: $color0;
+                    line-height: 36px;
+                }
+                >#cartNum {
+                    position: absolute;
+                    left: 154px;
+                    width: 40px;
+                    height: 36px;
+                    text-align: center;
+                    line-height: 36px;
+                    background-color: $color9;
+                    color: $co10;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    @at-root {
+        /*    sf mainNav */
+        .mainNav {
+            width: 100%;
+            height: 32px;
+            border-bottom: 2px solid $co11;
+            >.navmenu {
+                @include marginAuto();
+                color: $co12;
+                height: 32px;
+                width: $widths;
+                @extend %legacy-pie-clearfix;
+                >.categories {
+                    @extend %float-left;
+                    float: left;
+                    width: 200px;
+                    background: $co11;
+                    height: 34px;
+                    text-align: left;
+                    z-index: 100;
+                    >.dt {
+                        height: 34px;
+                        position: relative;
+                        >a {
+                            height: 32px;
+                            line-height: 32px;
+                            display: block;
+                            margin: 0px;
+                            padding: 0px;
+                            color: $co10;
+                            font-size: 14px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            width: 200px;
+                            text-align: center;
+                        }
+                        &.dtt:hover .dtd {
+                            display: block;
+                        }
+                        >.dd {
+                            margin: 0;
+                            z-index: 998;
+                            margin-top: 2px;
+                            padding: 0;
+                            width: 760px;
+                            height: 480px;
+                            position: absolute;
+                            @extend %legacy-pie-clearfix;
+                            &.dtd {
+                                display: none;
+                            }
+                            >#booksort {
+                                padding-top: 8px;
+                                padding-left: 12px;
+                                @extend %float-left;
+                                width: 188px;
+                                height: 472px;
+                                background-color: $co13;
+                                position: relative;
+                                >.item {
+                                    height: 58px;
+                                    &:hover {
+                                        background: $co10;
+                                        >.i-master {
+                                            h3 {
+                                                >a {
+                                                    color: $co13;
+                                                }
+                                                >p {
+                                                    &.fresh {
+                                                        background: url(../images/left_lm_m.png) no-repeat 0 5px;
+                                                    }
+                                                    &.pastry {
+                                                        background: url(../images/left_lm_m.png) no-repeat 0 -159px;
+                                                    }
+                                                    &.baby {
+                                                        background: url(../images/left_lm_m.png) no-repeat 0 -324px;
+                                                    }
+                                                    &.drinks {
+                                                        background: url(../images/left_lm_m.png) no-repeat 0 -47px;
+                                                    }
+                                                    &.food {
+                                                        background: url(../images/left_lm_m.png) no-repeat 0 -106px;
+                                                    }
+                                                    &.oil {
+                                                        background: url(../images/left_lm_m.png) no-repeat 0 -270px;
+                                                    }
+                                                    &.tea {
+                                                        background: url(../images/left_lm_m.png) no-repeat 0 -213px;
+                                                    }
+                                                    &.health {
+                                                        background: url(../images/left_lm_m.png) no-repeat 0 -378px;
+                                                    }
+                                                }
+                                            }
+                                            >.subCat {
+                                                >li {
+                                                    >a {
+                                                        color: $co13;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    >.i-master {
+                                        display: block;
+                                        height: 54px;
+                                        padding-left: 18px;
+                                        font-family: Microsoft YaHei;
+                                        >h3 {
+                                            font-size: 14px;
+                                            padding-top: 5px;
+                                            line-height: 22px;
+                                            >p {
+                                                width: 16px;
+                                                height: 22px;
+                                                margin-left: -20px;
+                                                float: left;
+                                                &.fresh {
+                                                    background: url(../images/left_lm_m_a.png) no-repeat 0 5px;
+                                                }
+                                                &.pastry {
+                                                    background: url(../images/left_lm_m_a.png) no-repeat 0 -159px;
+                                                }
+                                                &.baby {
+                                                    background: url(../images/left_lm_m_a.png) no-repeat 0 -324px;
+                                                }
+                                                &.drinks {
+                                                    background: url(../images/left_lm_m_a.png) no-repeat 0 -47px;
+                                                }
+                                                &.food {
+                                                    background: url(../images/left_lm_m_a.png) no-repeat 0 -106px;
+                                                }
+                                                &.oil {
+                                                    background: url(../images/left_lm_m_a.png) no-repeat 0 -270px;
+                                                }
+                                                &.tea {
+                                                    background: url(../images/left_lm_m_a.png) no-repeat 0 -213px;
+                                                }
+                                                &.health {
+                                                    background: url(../images/left_lm_m_a.png) no-repeat 0 -378px;
+                                                }
+                                            }
+                                            >a {
+                                                color: $co10;
+                                                margin-left: 2px;
+                                                @include YaHei1;
+                                            }
+                                        }
+                                        >ul {
+                                            font-size: 12px;
+                                            overflow: hidden;
+                                            line-height: 20px;
+                                            height: 20px;
+                                            @extend %legacy-pie-clearfix;
+                                            >li {
+                                                margin-right: 8px;
+                                                @extend %float-left;
+                                                >a {
+                                                    color: $co15;
+                                                    margin-left: 2px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    >.item_right {
+                                        position: absolute;
+                                        left: 200px;
+                                        width: 560px;
+                                        height: 480px;
+                                        top: 0px;
+                                        background: $co10;
+                                        display: none;
+                                        >.bookl {
+                                            height: 248px;
+                                            width: 542px;
+                                            padding: 8px 10px 24px;
+                                            >dl {
+                                                line-height: 26px;
+                                                @extend %legacy-pie-clearfix;
+                                                >dt {
+                                                    @extend %float-left;
+                                                    width: 80px;
+                                                    padding-right: 10px;
+                                                    font-weight: bold;
+                                                    text-align: right;
+                                                    height: 18px;
+                                                    line-height: 18px;
+                                                    margin: 4px 0px;
+                                                    color: $co13;
+                                                }
+                                                >dd {
+                                                    //@extend %float-left;
+                                                    @extend %legacy-pie-clearfix;
+                                                    overflow: hidden;
+                                                    >a {
+                                                        float: left;
+                                                        display: block;
+                                                        font-size: 12px;
+                                                        height: 18px;
+                                                        line-height: 18px;
+                                                        margin: 4px 0px;
+                                                        text-align: left;
+                                                        padding: 0px 6px;
+                                                        border-left: 1px solid #ccc;
+                                                        color: #666;
+                                                        cursor: pointer;
+                                                        &:hover {
+                                                            color: $co13;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        >.boor {
+                                            width: 542px;
+                                            height: 200px;
+                                            >a {
+                                                display: block;
+                                                >img {
+                                                    height: $height;
+                                                    width: $width;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                >.menu1 {
+                    width: 1000px;
+                    height: 32px;
+                    position: relative;
+                    z-index: 30;
+                    @extend %float-left;
+                    >ul {
+                        height: $height;
+                        width: $width;
+                        @extend %legacy-pie-clearfix;
+                        >li {
+                            @extend %float-left;
+                            line-height: 32px;
+                            >a {
+                                padding: 0 24px;
+                                display: block;
+                                height: 32px;
+                                color: $co14;
+                                @include YaHei;
+                            }
+                            &.end {
+                                position: absolute;
+                                right: 0;
+                                >a {
+                                    padding: 0;
+                                    width: 196px;
+                                    height: 32px;
+                                    >img {
+                                        height: $height;
+                                        width: $width;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @at-root {
+        /* sf banner */
+        .slide_show {
+            width: 100%;
+            height: 480px;
+            position: relative;
+            z-index: 29;
+            >.indexW {
+                width: $widths;
+                @include marginAuto();
+                background: red;
+                height: 480px;
+                position: relative;
+                >.rSide {
+                    width: 260px;
+                    position: absolute;
+                    top: 0;
+                    margin-left: 940px;
+                    z-index: 999;
+                    >a {
+                        display: block;
+                        width: 260px;
+                        &.r-img1 {
+                            height: 185px;
+                            margin-top: 15px;
+                        }
+                        &.r-img2,
+                        .r-img3 {
+                            height: 130px;
+                            margin-top: 1px;
+                        }
+                        &.r-img3 {
+                            height: 130px;
+                            margin-top: 1px;
+                        }
+                        >img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+                >.lside {
+                    height: 480px;
+                    width: 1000px;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 30;
+                    margin-left: 200px;
+                    background: yellowgreen;
+                    >.supperbanner_img_contants{
+                        height: 480px;
+                        position: relative;
+                        >li{
+                            height: 480px;
+                            position: relative;
+                        }
+                    }
+                    >.supperbanner_btn_wrap {
+                        position: absolute;
+                        z-index: 3;
+                        
+                        width: 150px;
+                        height: 28px;
+                        line-height: 28px;
+                        border-radius: 15px;
+                        bottom: 20px;
+                        left: 50%;
+                        margin-left: -75px;
+                        text-align: center;
+                        
+                        >span {
+                            cursor: pointer;
+                            width: 11px;
+                            height: 11px;
+                            display: inline-block;
+                            margin: 8px 5px;
+                            background-color: #fff;
+                            border-radius: 5px;
+                            &.on{
+                                background-color: $color9;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    @at-root {
+        .thefifthyear {
+            position: relative;
+            z-index: -1;
+            >.mc {
+                height: 573px;
+                left: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                background: url(../images/thefifthyear.png) center top no-repeat;
+                text-indent: -9999px;
+            }
+        }
+    }
+    @at-root {
+        .indexW {
+            width: $widths;
+            @include marginAuto();
+            margin-top: 30px;
+            @extend %legacy-pie-clearfix;
+            @at-root {
+                .bestbuy {
+                    padding-left: 10px;
+                    width: 1190px;
+                    @extend %legacy-pie-clearfix;
+                    >.b_left {
+                        @extend %float-left;
+                        width: 945px;
+                        overflow: hidden;
+                        >h3 {
+                            @include YaHei2;
+                            color: $co16;
+                            padding: 0 0 12px 3px;
+                            >span {
+                                margin: 0 0 0 15px;
+                                overflow: hidden;
+                                background: url(../images/index_icon_new.png) no-repeat -29px -333px;
+                                height: 14px;
+                                width: 118px;
+                                display: inline-block;
+                            }
+                        }
+                        >ul.bbig {
+                            border-left: 1px solid $co17;
+                            display: block;
+                            width: 944px;
+                            border-top: 1px solid $co17;
+                            @extend %legacy-pie-clearfix;
+                            >li {
+                                position: relative;
+                                height: 258px;
+                                @extend %float-left;
+                                border-right: 1px solid #e8e8e8;
+                                border-bottom: 1px solid #e8e8e8;
+                                overflow: hidden;
+                                width: 235px;
+                                >a {
+                                    display: block;
+                                    height: 258px;
+                                    width: 235px;
+                                    >p {
+                                        @include YaHei3;
+                                        color: $co18;
+                                        display: inline-block;
+                                        margin-left: 12px;
+                                        height: 15px;
+                                        overflow: hidden;
+                                        padding-top: 9px;
+                                    }
+                                    >h3 {
+                                        color: $co19;
+                                        height: 16px;
+                                        padding-top: 10px;
+                                        margin-left: 12px;
+                                        overflow: hidden;
+                                        @include YaHei4;
+                                        >i {
+                                            font-style: normal;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    >.bbig_img {
+                                        width: 204px;
+                                        height: 204px;
+                                        @include margin(4px 0 0 31px);
+                                        >img {
+                                            height: $height;
+                                            width: $width;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    >.rSide1 {
+                        margin-top: 30px;
+                        border: 1px solid $co17;
+                        width: 222px;
+                        height: 517px;
+                        overflow: hidden;
+                        @extend %float-right;
+                        >.rImg2 {
+                            height: 300px;
+                            width: 222px;
+                            text-align: center;
+                            overflow: hidden;
+                            >a {
+                                height: $height;
+                                width: $width;
+                                >img {
+                                    height: $height;
+                                    width: $width;
+                                }
+                            }
+                        }
+                        >.sfNews {
+                            @include marginAuto();
+                            width: 202px;
+                            overflow: hidden;
+                            >.rTitle {
+                                border-bottom: 1px dotted $co20;
+                                overflow: hidden;
+                                padding: 15px 0 10px 0;
+                                line-height: 14px;
+                                overflow: hidden;
+                                height: 14px;
+                                @extend %legacy-pie-clearfix;
+                                >h2 {
+                                    @extend %float-left;
+                                    @include YaHei3;
+                                    float: left;
+                                }
+                                >a {
+                                    @extend %float-right;
+                                    display: block;
+                                    padding-top: 2px;
+                                    color: $color3;
+                                }
+                            }
+                            >ul {
+                                margin: 8px auto;
+                                height: 156px;
+                                overflow: hidden;
+                                >li {
+                                    line-height: 26px;
+                                    height: 26px;
+                                    overflow: hidden;
+                                    >a {
+                                        color: $color0;
+                                        &.red {
+                                            color: $co21;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @at-root {
+                .mt2 {
+                    width: 1200px;
+                    @extend %legacy-pie-clearfix;
+                    >.timeLimit_l {
+                        @extend %float-left; //background: $co22;
+                        height: 360px;
+                        width: 945px;
+                        margin-left: 10px;
+                        >.timeLimit_top {
+                            padding: 16px 0 16px 20px;
+                            background: $co23;
+                            height: 28px;
+                            color: $co21;
+                            @include YaHei5;
+                            border-top: 1px solid $co24;
+                            @extend %legacy-pie-clearfix;
+                            >span {
+                                width: 31px;
+                                height: 34px;
+                                background: url(../images/paid_bg.png) -39px -266px no-repeat;
+                                margin-left: 12px;
+                                margin-top: -4px;
+                                @extend %float-left;
+                            }
+                            >p {
+                                margin: 0 0 0 10px;
+                                @extend %float-left;
+                                color: $co10;
+                                &.t_jd {
+                                    width: 111px;
+                                    height: 28px;
+                                    line-height: 28px;
+                                    font-size: 23px;
+                                    margin-top: -2px;
+                                }
+                                &.ttl {
+                                    font-size: 12px;
+                                    color: $co25;
+                                    padding: 0 10px 0 10px;
+                                }
+                                &.tt2 {
+                                    font-size: 12px;
+                                    color: $co25;
+                                }
+                            }
+                            >ul.time {
+                                width: 200px;
+                                height: 40px;
+                                margin-top: -4px;
+                                @extend %float-left;
+                                @extend %legacy-pie-clearfix;
+                                >li {
+                                    @extend %float-left;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    width: 38px;
+                                    margin-top: -1px;
+                                    margin-right: 2px;
+                                    text-align: center;
+                                    &.no {
+                                        font-size: 12px;
+                                        color: $co25;
+                                    }
+                                    &.now {
+                                        @include YaHei6;
+                                        color: $co10;
+                                        background: url(../images/paid_bg.png) -185px -217px no-repeat;
+                                    }
+                                }
+                            }
+                            >p.tright {
+                                @extend %float-right;
+                                width: 100px;
+                                height: 28px;
+                                text-align: center;
+                                color: $co10;
+                                margin-right: 10px;
+                                cursor: pointer;
+                                @include YaHei7;
+                            }
+                        }
+                        >.timeLimit_bot {
+                            border: 1px solid $co24;
+                            border-top: none;
+                            >ul {
+                                @extend %legacy-pie-clearfix;
+                                >li {
+                                    width: 166px;
+                                    border-right: none;
+                                    padding: 13px 0 18px 19px;
+                                    overflow: hidden;
+                                    @extend %float-left;
+                                    >a {
+                                        display: block;
+                                        >.bImg {
+                                            width: 164px;
+                                            height: 164px;
+                                            margin-bottom: 7px;
+                                            border: 1px solid $color2;
+                                            >img {
+                                                height: $height;
+                                                width: $width;
+                                            }
+                                        }
+                                        >.p1 {
+                                            height: 18px;
+                                            line-height: 18px;
+                                            overflow: hidden;
+                                        }
+                                        >.p2 {
+                                            @include YaHei8;
+                                            color: $co19;
+                                            height: 19px;
+                                        }
+                                        >.p3 {
+                                            line-height: 22px;
+                                            height: 22px;
+                                            overflow: hidden;
+                                            >i {
+                                                color: $co26;
+                                            }
+                                            >b {
+                                                @include YaHei9;
+                                                color: $co19;
+                                            }
+                                        }
+                                        >.btn {
+                                            color: $co10;
+                                            width: 166px;
+                                            height: 28px;
+                                            text-align: center;
+                                            background: $co23;
+                                            margin-top: 6px;
+                                            @include YaHei10;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    >.timeLimit_r {
+                        @extend %float-right;
+                        width: 222px;
+                        height: 330px;
+                        overflow: hidden;
+                        >a {
+                            display: block;
+                            >img {
+                                height: $height;
+                                width: $width;
+                            }
+                        }
+                    }
+                }
+            }
+            @at-root {
+                .full_ad {
+                    padding-left: 10px;
+                    width: 1190px;
+                    height: 100px;
+                    >a {
+                        display: block;
+                        width: 1190px;
+                        height: 100px;
+                        >img {
+                            height: $height;
+                            width: $width;
+                        }
+                    }
+                }
+            }
+            @at-root {
+                .category {
+                    width: 240px;
+                    overflow: hidden;
+                    padding-left: 10px;
+                    @extend %float-left;
+                    >h3 {
+                        width: 240px;
+                        height: 50px;
+                        line-height: 50px;
+                        color: $co10;
+                        border-radius: 5px 0 0 0;
+                        @extend %legacy-pie-clearfix;
+                        &:hover {
+                            opacity: 0.9;
+                        }
+                        >i {
+                            width: 15px;
+                            height: 16px;
+                            margin: 16px 8px 0 75px;
+                            @extend %float-left;
+                        }
+                        >a {
+                            @include YaHei11;
+                            color: $co10;
+                            margin-right: 8px;
+                        }
+                        &.fruits {
+                            background: $co13;
+                            >i {
+                                background: url(../images/index_icon_new.png) no-repeat -97px -295px;
+                            }
+                        }
+                        &.meat {
+                            background: $co27;
+                            >i {
+                                background: url(../images/index_icon_new.png) no-repeat -178px -317px;
+                            }
+                        }
+                        &.food {
+                            background: $co31;
+                            >i {
+                                background: url(../images/index_icon_new.png) no-repeat -70px -296px;
+                            }
+                        }
+                        &.grain {
+                            background: $co27;
+                            >i {
+                                background: url(../images/index_icon_new.png) no-repeat -70px -296px;
+                            }
+                        }
+                        &.arder {
+                            background: $co32;
+                            >i {
+                                background: url(../images/index_icon_new.png) no-repeat -126px -295px;
+                            }
+                        }
+                        &.tea {
+                            background: $co33;
+                            >i {
+                                background: url(../images/index_icon_new.png) no-repeat -154px -294px;
+                            }
+                        }
+                        &.drinks {
+                            background: $co34;
+                            >i {
+                                background: url(../images/index_icon_new.png) no-repeat -179px -293px;
+                            }
+                        }
+                    }
+                    >.category_img {
+                        width: 240px;
+                        height: 420px;
+                        >a {
+                            display: block;
+                            width: 250px;
+                            height: 420px;
+                            margin-left: -10px;
+                            >img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .subCont {
+                    padding: 7px 10px 9px 10px;
+                    width: 710px;
+                    border-bottom: 1px solid $co28;
+                    @extend %float-left;
+                    &.fruits_bor {
+                        border-top: 1px solid $co29;
+                    }
+                    &.meat_bor {
+                        border-top: 1px solid $co30;
+                    }
+                    &.food_bor {
+                        border-top: 1px solid $co31;
+                    }
+                    &.grain_bor {
+                        border-top: 1px solid $co27;
+                    }
+                    &.arder_bor {
+                        border-top: 1px solid $co32;
+                    }
+                    &.tea_bor {
+                        border-top: 1px solid $co33;
+                    }
+                    &.drinks_bor {
+                        border-top: 1px solid $co34;
+                    }
+                    >ul {
+                        @extend %legacy-pie-clearfix;
+                        >li {
+                            width: 160px;
+                            padding: 8px;
+                            @extend %float-left;
+                            >.subCont_img {
+                                position: relative;
+                                width: 160px;
+                                height: 160px;
+                                margin-bottom: 10px;
+                                overflow: hidden;
+                                >a {
+                                    display: block;
+                                    width: 160px;
+                                    height: 160px;
+                                    >img {
+                                        height: $height;
+                                        width: $width;
+                                    }
+                                }
+                                >.move_img {
+                                    position: absolute;
+                                    top: 160px;
+                                    width: 160px;
+                                    height: 24px;
+                                    border-radius: 2px;
+                                    background: #76ac25;
+                                    filter: alpha(opacity=95);
+                                    -moz-opacity: 0.95;
+                                    opacity: 0.95;
+                                    cursor: pointer;
+                                    z-index: 10;
+                                    display: block;
+                                    >a {
+                                        margin: 0 auto;
+                                        width: 60px;
+                                        height: 24px;
+                                        display: block;
+                                        background: url(../images/indexsprite.png) no-repeat -66px -177px;
+                                        line-height: 24px;
+                                        font-family: Microsoft YaHei;
+                                        font-size: 12px;
+                                        color: #fff;
+                                        text-decoration: none;
+                                        padding-left: 20px;
+                                    }
+                                }
+                            }
+                            >.subT {
+                                height: 18px;
+                                line-height: 18px;
+                                width: 160px;
+                                >a {
+                                    text-align: left;
+                                    display: block;
+                                    line-height: 18px;
+                                    color: $color0;
+                                }
+                            }
+                            >.subB {
+                                padding-top: 6px;
+                                width: 160px;
+                                height: 16px;
+                                color: $co19;
+                                @include YaHei12;
+                                >i {
+                                    font-style: normal;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .redge {
+                    width: 220px;
+                    height: 469px;
+                    float: left;
+                    background: #f4f4f4;
+                    overflow: hidden;
+                    &.fruits_bor {
+                        border-top: 1px solid $co29;
+                        >ul {
+                            >li:hover {
+                                background: $co13;
+                                >a {
+                                    color: $co10;
+                                }
+                            }
+                        }
+                    }
+                    &.meat_bor {
+                        border-top: 1px solid $co30;
+                        >ul {
+                            >li:hover {
+                                background: $co30;
+                                >a {
+                                    color: $co10;
+                                }
+                            }
+                        }
+                    }
+                    &.food_bor {
+                        border-top: 1px solid $co31;
+                        >ul {
+                            >li:hover {
+                                background: $co31;
+                                >a {
+                                    color: $co10;
+                                }
+                            }
+                        }
+                    }
+                    &.grain_bor {
+                        border-top: 1px solid $co27;
+                        >ul {
+                            >li:hover {
+                                background: $co27;
+                                >a {
+                                    color: $co10;
+                                }
+                            }
+                        }
+                    }
+                    &.arder_bor {
+                        border-top: 1px solid $co32;
+                        >ul {
+                            >li:hover {
+                                background: $co32;
+                                >a {
+                                    color: $co10;
+                                }
+                            }
+                        }
+                    }
+                    &.tea_bor {
+                        border-top: 1px solid $co33;
+                        >ul {
+                            >li:hover {
+                                background: $co33;
+                                >a {
+                                    color: $co10;
+                                }
+                            }
+                        }
+                    }
+                    &.drinks_bor {
+                        border-top: 1px solid $co34;
+                        >ul {
+                            >li:hover {
+                                background: $co34;
+                                >a {
+                                    color: $co10;
+                                }
+                            }
+                        }
+                    }
+                    >ul {
+                        margin: 25px 0 0 15px;
+                        height: 189px;
+                        overflow: hidden;
+                        @extend %legacy-pie-clearfix;
+                        >li {
+                            @extend %float-left;
+                            margin: 4px;
+                            _margin: 3px;
+                            width: 55px;
+                            height: 55px;
+                            text-align: center;
+                            line-height: 55px;
+                            border-radius: 50%;
+                            background: $co10;
+                        }
+                    }
+                    >.rimg {
+                        height: 230px;
+                        width: 220px;
+                        margin-top: 25px;
+                        background: red;
+                        position: relative;
+                        >a {
+                            display: block;
+                            >img {
+                                height: $height;
+                                width: $width;
+                            }
+                        }
+                        >.btn {
+                            background: url(../images/index_icon_new.png) no-repeat -204px 0px;
+                            width: 25px;
+                            height: 25px;
+                            position: absolute;
+                            top: 65px;
+                            left: 15px;
+                            z-index: 3;
+                            >a {
+                                display: block;
+                                width: 25px;
+                                height: 25px;
+                            }
+                            &.fruits_hov:hover {
+                                background: url(../images/index_icon_new.png) no-repeat -204px -33px;
+                            }
+                            &.meat_hov:hover {
+                                background: url(../images/index_icon_new.png) no-repeat -204px -199px;
+                            }
+                            &.food_hov:hover {
+                                background: url(../images/index_icon_new.png) no-repeat -204px -66px;
+                            }
+                            &.grain_hov:hover {
+                                background: url(../images/index_icon_new.png) no-repeat -204px -199px;
+                            }
+                            &.arder_hov:hover {
+                                background: url(../images/index_icon_new.png) no-repeat -204px -99px;
+                            }
+                            &.tea_hov:hover {
+                                background: url(../images/index_icon_new.png) no-repeat -204px -132px;
+                            }
+                            &.drinks_hov:hover {
+                                background: url(../images/index_icon_new.png) no-repeat -204px -166px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.promote {
+                border: #f5f5f5 1px solid;
+                padding: 15px 14px;
+                width: 1170px;
+                margin-top: 46px;
+                position: relative;
+                >.promote_top {
+                    width: 116px;
+                    height: 23px;
+                    position: absolute;
+                    top: -14px;
+                    left: 50%;
+                    margin-left: -58px;
+                    background: #fff;
+                    text-align: center;
+                    >i {
+                        width: 97px;
+                        height: 23px;
+                        display: inline-block;
+                        background: url(../images/sf_new_bg.png) left top no-repeat;
+                    }
+                }
+                >ul {
+                    @extend %legacy-pie-clearfix;
+                    >li {
+                        width: 210px;
+                        padding: 15px 12px;
+                        position: relative;
+                        z-index: 1;
+                        @extend %float-left;
+                        >.pImg {
+                            width: 210px;
+                            height: 210px;
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                            position: relative;
+                            >a {
+                                display: block;
+                                width: 210px;
+                                height: 210px;
+                                >img {
+                                    height: $height;
+                                    width: $width;
+                                }
+                            }
+                            >.gBtn {
+                                position: absolute;
+                                width: 210px;
+                                height: 24px;
+                                background: $co13;
+                                filter: alpha(opacity=95);
+                                -moz-opacity: 0.95;
+                                opacity: 0.95;
+                                top: 210px;
+                                cursor: pointer;
+                                z-index: 4;
+                                >a {
+                                    display: block;
+                                    width: 60px;
+                                    height: 24px;
+                                    background: url(../images/indexsprite.png) no-repeat -66px -177px;
+                                    color: #fff;
+                                    padding-left: 20px;
+                                    @include YaHei13;
+                                    @include marginAuto();
+                                }
+                            }
+                        }
+                        >.pt {
+                            height: 36px;
+                            overflow: hidden;
+                            width: 210px;
+                            >a {
+                                line-height: 18px;
+                                display: block;
+                            }
+                        }
+                        >.pb {
+                            height: 16px;
+                            color: $co19;
+                            @include YaHei12;
+                            padding-top: 6px;
+                            >i {
+                                font-style: normal;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            @at-root {
+                .zhiwei {
+                    @extend %float-left;
+                    width: 600px;
+                    height: 200px;
+                    border-bottom: 1px solid $co36;
+                    margin: 0 20px 0 10px;
+                    overflow: hidden;
+                    >h3 {
+                        padding: 15px 0 9px 15px;
+                        background: url(../images/zhiwei_bg.jpg) no-repeat center left;
+                        width: 585px;
+                        height: 26px;
+                        @include YaHei14;
+                        color: $co18;
+                        border-bottom: 1px solid $co17;
+                    }
+                    >ul {
+                        margin-top: 20px;
+                        @extend %legacy-pie-clearfix;
+                        >li {
+                            height: 110px;
+                            width: 170px;
+                            @extend %float-left;
+                            margin-left: 14px;
+                            >a {
+                                display: block;
+                                height: 110px;
+                                >img {
+                                    height: $height;
+                                    width: $width;
+                                }
+                            }
+                            &.info {
+                                margin-left: 10px;
+                                width: 205px;
+                                >a {
+                                    display: block;
+                                    height: 21px;
+                                    overflow: hidden;
+                                    padding-left: 10px;
+                                    width: 205px;
+                                    line-height: 20px;
+                                    color: $co37;
+                                    background: url(../images/dian.jpg) no-repeat scroll left center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .share {
+                    @extend %float-right;
+                    width: 420px;
+                    height: 200px;
+                    border-bottom: 1px solid $co36;
+                    margin: 0 20px 0 0;
+                    overflow: hidden;
+                    >h3 {
+                        padding: 15px 0 9px 15px;
+                        background: url(../images/zhiwei_bg.jpg) no-repeat center left;
+                        width: 405px;
+                        height: 26px;
+                        @include YaHei14;
+                        color: $co18;
+                        border-bottom: 1px solid $co17;
+                    }
+                    >.shares {
+                        margin: 20px 0 0 0;
+                        position: relative;
+                        height: 122px;
+                        overflow: hidden;
+                        >ul {
+                            position: absolute;
+                            left: 0px;
+                            top: 0;
+                            >li {
+                                height: 58px;
+                                overflow: hidden;
+                                border-bottom: 1px dotted $co17;
+                                margin-bottom: 6px;
+                                vertical-align: middle;
+                                >.share_c {
+                                    height: 50px;
+                                    overflow: hidden;
+                                    @extend %legacy-pie-clearfix;
+                                    >.l {
+                                        height: 50px;
+                                        width: 50px;
+                                        @extend %float-left;
+                                        >a {
+                                            display: block;
+                                            height: 50px;
+                                            >img {
+                                                height: $height;
+                                                width: $width;
+                                            }
+                                        }
+                                    }
+                                    >.r {
+                                        @extend %float-right;
+                                        width: 370px;
+                                        overflow: hidden;
+                                        height: 50px;
+                                        >p {
+                                            padding-left: 20px;
+                                            overflow: hidden;
+                                            height: 22px;
+                                            line-height: 22px;
+                                            >a {
+                                                color: $color9;
+                                            }
+                                        }
+                                        >.s_title {
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                            padding-left: 20px;
+                                            overflow: hidden;
+                                            height: 22px;
+                                            line-height: 22px;
+                                            >a {
+                                                color: $co37;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } // .youpin {
+                //     @extend %float-right;
+                //     border: 1px solid $co17;
+                //     height: 199px;
+                //     width: 328px;
+                //     >.ucaption {
+                //         @include YaHei14;
+                //         margin: 0 auto;
+                //         width: 300px;
+                //         height: 26px;
+                //         padding: 14px 0 9px 0;
+                //         border-bottom: 1px solid $co17;
+                //         >p {
+                //             background: url(../images/youpin.jpg) no-repeat center left;
+                //             padding: 0 0 0 24px;
+                //             @extend %float-left;
+                //             color: $co18;
+                //         }
+                //         >h2 {
+                //             @extend %float-right;
+                //             display: block;
+                //             >a {
+                //                 width: 60px;
+                //                 height: 29px;
+                //                 display: block;
+                //                 cursor: pointer;
+                //                 background: url(../images/foot_bottom.png) no-repeat -3px -97px;
+                //             }
+                //         }
+                //     }
+                //     >ul {
+                //         margin-top: 20px;
+                //         @extend %legacy-pie-clearfix;
+                //         >li {
+                //             height: 110px;
+                //             width: 160px;
+                //             margin-left: 3px;
+                //             @extend %float-left;
+                //             >a {
+                //                 display: block;
+                //                 height: 110px;
+                //                 >img {
+                //                     height: $height;
+                //                     width: $width;
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+    @at-root {
+        .promote-end {
+            width: 220px;
+            margin: 0 auto;
+            height: 18px;
+            >.t1 {
+                height: 1px;
+                overflow: hidden;
+                margin-top: 18px;
+                background: $co35
+            }
+            >.t2 {
+                background: $co10;
+                text-align: center;
+                width: 97px;
+                margin: 0 auto;
+                color: $color3;
+                margin-top: -8px;
+                @include YaHei3;
+            }
+        }
+    }
+    @at-root {
+        .footer {
+            color: $color3;
+            width: 100%;
+            overflow: hidden;
+            line-height: 18px;
+            color: $color3;
+            >.footer_zd {
+                height: 120px;
+                background: $co35;
+                width: 100%;
+                margin: 10px 0 0 0;
+                >ul {
+                    @extend %legacy-pie-clearfix;
+                    width: 1200px;
+                    margin: 0px auto;
+                    >li {
+                        width: 300px;
+                        height: 120px;
+                        @extend %float-left;
+                        &.quanqiu {
+                            background: url(../images/qq.jpg) no-repeat center center;
+                        }
+                        &.chandi {
+                            background: url(../images/cd.jpg) no-repeat center center;
+                        }
+                        &.qcll {
+                            background: url(../images/qc.jpg) no-repeat center center;
+                        }
+                        &.sfzd {
+                            background: url(../images/sf.jpg) no-repeat center center;
+                        }
+                    }
+                }
+            }
+        }
+        .foot {
+            width: 100%;
+            height: 285px;
+            >.pageFooter {
+                width: 1200px;
+                margin: 0 auto;
+                @extend %legacy-pie-clearfix;
+                >.middle {
+                    @extend %float-left;
+                    width: 290px;
+                    height: 145px;
+                    margin: 20px 0px 0px 10px;
+                    background: url(../images/logo.jpg) no-repeat left top;
+                    >.middle1 {
+                        padding: 91px 0 6px 0;
+                        font-size: 20px;
+                        color: $co37;
+                        font-weight: bold;
+                    }
+                }
+                >.right {
+                    @extend %float-left;
+                    margin: 35px 0 0 0;
+                    width: 645px;
+                    @extend %legacy-pie-clearfix;
+                    >ul {
+                        @extend %float-left;
+                        margin: 0px 8px 0px 0px;
+                        width: 120px;
+                        >li {
+                            @include YaHei13;
+                            &.title {
+                                color: $co38;
+                                font-weight: bold;
+                                font-size: 14px;
+                            }
+                            >a {
+                                color: $co37;
+                                &:hover {
+                                    color: $color6;
+                                }
+                            }
+                        }
+                    }
+                }
+                >.left {
+                    @extend %float-left;
+                    margin: 35px 0 0 0;
+                    width: 235px;
+                    height: 145px;
+                    @extend %legacy-pie-clearfix;
+                    >ul {
+                        @extend %float-left;
+                        >li {
+                            @include YaHei15;
+                            width: 80px;
+                            text-align: center;
+                            margin: 0 50px 8px 0;
+                            line-height: 24px;
+                            color: $co37;
+                            >span {
+                                display: block;
+                                width: 80px;
+                                height: 80px;
+                                background: url(../images/foot_bottom.png) no-repeat 0px 0px;
+                            }
+                        }
+                        &.f_wx {
+                            >li {
+                                margin: 0 0 8px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            >.bottom {
+                width: 1180px;
+                height: 50px;
+                margin: 0px auto;
+                border-top: 1px solid $co39;
+                padding-top: 15px;
+                @extend %legacy-pie-clearfix;
+                >li {
+                    @extend %float-left;
+                    margin-right: 5px;
+                    &.bottom_kx {
+                        height: 33px;
+                        width: 94px;
+                        &:hover {
+                            -webkit-transform: scale(1.3);
+                            -moz-transform: scale(1.3);
+                            -o-transform: scale(1.3);
+                            -webkit-transform-origin: center center;
+                        }
+                        >a {
+                            display: block;
+                            height: 33px;
+                            width: 94px;
+                            >img {
+                                height: $height;
+                                width: $width;
+                            }
+                        }
+                    }
+                    &.siteinfo {
+                        height: 36px;
+                        >p {
+                            line-height: 18px;
+                            height: 18px;
+                            &.siteinfoP {
+                                >a {
+                                    line-height: 18px;
+                                    font-size: 12px;
+                                    color: $co37;
+                                    margin-right: 10px;
+                                    &:hover {
+                                        color: $co29;
+                                    }
+                                }
+                            }
+                            &.siteinfop {
+                                >a {
+                                    margin-left: 10px;
+                                    line-height: 18px;
+                                    font-size: 12px;
+                                    color: $color3;
+                                    &:hover {
+                                        color: $co29;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @at-root {
+        .scrollTop {
+            width: 44px;
+            height: 300px;
+            position: fixed;
+            bottom: 20px;
+            z-index: 1000;
+            right: 10px;
+            left: auto;
+            margin-left: 0;
+            >.side-c {
+                height: 44px;
+                width: 44px;
+                margin-top: 6px;
+                position: relative;
+                >a {
+                    height: 42px;
+                    width: 42px;
+                    display: block;
+                    color: $color0;
+                    opacity: 0.8;
+                    border: 1px solid $co40;
+                    &.side_v {
+                        background: url(../images/paid_bg.png) no-repeat -41px -182px;
+                    }
+                    &.s-cart {
+                        background: url(../images/productList.png) no-repeat 0 -45px;
+                        &:hover {
+                            background: url(../images/productList.png) no-repeat 0 -147px;
+                        }
+                    }
+                    &.s-guang {
+                        background: url(../images/productList.png) no-repeat -42px -82px;
+                        &:hover {
+                            background: url(../images/jilu.png) no-repeat center;
+                        }
+                    }
+                    &.s-app {
+                        background: url(../images/productList.png) no-repeat -42px -40px;
+                        &:hover {
+                            background: url(../images/productList.png) no-repeat -42px -142px;
+                        }
+                    }
+                    &.s-promote {
+                        background: url(../images/sf_new_bg.png) no-repeat 0 -27px;
+                        &:hover {
+                            background: url(../images/tuijian.png) no-repeat center;
+                        }
+                    }
+                    &.s-top {
+                        background: url(../images/productList.png) no-repeat 0 -82px;
+                        &:hover {
+                            background: url(../images/productList.png) no-repeat 0 -184px;
+                        }
+                    }
+                }
+                &#moveLeft {
+                    >.moveL {
+                        position: absolute;
+                        right: 44px;
+                        bottom: -50px;
+                        width: 372px;
+                        height: 178px;
+                        overflow: hidden;
+                        display: none;
+                        >.appItem {
+                            padding-top: 20px;
+                            position: relative;
+                            bottom: 0;
+                            border: 1px solid $co40;
+                            width: 360px;
+                            height: 156px;
+                            background: $co10;
+                            >.sf-client {
+                                margin-bottom: 10px;
+                                margin-left: 50px;
+                                position: relative;
+                                text-align: left;
+                                >.client-img {
+                                    width: 115px;
+                                    height: 116px;
+                                    overflow: hidden;
+                                    background: url(../images/indexImg20130307.png) no-repeat 0 -210px;
+                                    display: block;
+                                }
+                                >i {
+                                    position: absolute;
+                                    width: 50px;
+                                    height: 29px;
+                                    left: 135px;
+                                    top: 20px;
+                                    background: url(../images/header.png) no-repeat -73px -93px;
+                                    display: block;
+                                }
+                                >.client-txt {
+                                    position: absolute;
+                                    left: 145px;
+                                    top: 54px;
+                                    >em {
+                                        display: block;
+                                        line-height: 20px;
+                                    }
+                                    >strong {
+                                        color: $co13;
+                                        line-height: 20px;
+                                    }
+                                }
+                            }
+                            >.client-promo {
+                                height: 30px;
+                                background: url(../images/indexImg20130307.png) no-repeat -116px -210px #fcfbe4;
+                                text-align: center;
+                                font-size: 14px;
+                                font-weight: bold;
+                                line-height: 30px;
+                                >a {
+                                    color: $co23;
+                                }
+                            }
+                            >.cart-arr {
+                                right: -8px;
+                                position: absolute;
+                                margin-left: -1px;
+                                bottom: 63px;
+                                background: url(../images/productList.png) no-repeat -88px -88px;
+                                width: 8px;
+                                height: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @at-root {
+        .indexw {
+            width: $widths;
+            @include marginAuto();
+            >.breadcrumb {
+                overflow: hidden;
+                margin: 10px 0;
+                width: 1200px;
+                height: 22px;
+                line-height: 22px;
+                >strong {
+                    @include YaHei16;
+                    >a {
+                        color: $color0;
+                        @include YaHei16;
+                    }
+                }
+                >span {
+                    @include arial2;
+                    >h1 {
+                        display: inline;
+                        font-weight: normal;
+                        font-size: 12px;
+                        >a {
+                            color: $color0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @at-root {
+        .content_list {
+            width: $widths;
+            @include marginAuto();
+            @extend %legacy-pie-clearfix;
+            >.left-box {
+                @extend %float-left;
+                width: 186px;
+                >.catlist {
+                    border-width: 2px 1px 1px 1px;
+                    border-color: $color5 $co40 $co40 $co40;
+                    border-style: solid;
+                    overflow: hidden;
+                    width: 184px;
+                    >h3 {
+                        height: 40px;
+                        padding: 0 7px 0 10px;
+                        @include YaHei17;
+                        background: $co35;
+                        border-bottom: 1px solid $co40;
+                    }
+                    >ul {
+                        >li {
+                            &:nth-child(1){
+                                border-top:none;
+                            }
+                            border-top: 1px dashed $co40;
+                            >h3 {
+                                height: 34px;
+                                line-height: 34px;
+                                padding: 0 7px 0 10px;
+                                font: 14px/34px 宋体;
+                                font-weight: bold;
+                                color: $co37;
+                                cursor: pointer;
+                                overflow: hidden;
+                                >b {
+                                    cursor: pointer;
+                                    @extend %float-left;
+                                    height: 14px;
+                                    width: 14px;
+                                    display: block;
+                                    margin: 10px 5px 0 0;
+                                    overflow: hidden;
+                                    background: url(../images/productList.png) no-repeat;
+                                }
+                            }
+                            >.listShow {
+                                display: none;
+                                >span {
+                                    height: 20px;
+                                    line-height: 20px;
+                                    overflow: hidden;
+                                    padding: 3px 15px 3px 30px;
+                                    width: 144px;
+                                    color: $co41;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @at-root {
+        #curr b {
+            background: url(../images/productList.png) -14px 0 no-repeat;
+        }
+    }
+}

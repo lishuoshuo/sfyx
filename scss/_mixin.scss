@@ -1,0 +1,66 @@
+@mixin marginAuto($top:0, $bottom:0) {
+	margin: $top auto $bottom;
+}
+@mixin margin($top:0, $right:0,$bottom:0){
+    margin: $top;
+}
+@mixin arial($size:12px, $line-height: 1.5, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  Arial,Verdana,"宋体";
+}
+@mixin arial2($size:12px, $line-height: 22px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "宋体";
+}
+@mixin YaHei($size:14px, $line-height: 32px, $weight:700) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei1($size:14px, $line-height: 22px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei2($size:18px, $line-height: 18px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei3($size:14px, $line-height: 14px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei4($size:16px, $line-height: 16px, $weight:bold) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei5($size:24px, $line-height: 28px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei6($size:26px, $line-height: 40px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "宋体";
+}
+@mixin YaHei7($size:18px, $line-height: 28px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei8($size:14px, $line-height: 18px, $weight:700) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei9($size:14px, $line-height: 22px, $weight:700) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei10($size:14px, $line-height: 28px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei11($size:16px, $line-height: 50px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Arial,Verdana","宋体";
+}
+@mixin YaHei12($size:14px, $line-height: 16px, $weight:bold) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei13($size:12px, $line-height: 24px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei14($size:16px, $line-height: 26px, $weight:bold) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei15($size:14px, $line-height: 24px, $weight:bold) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei16($size:16px, $line-height: 22px, $weight:bold) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei17($size:16px, $line-height: 40px, $weight:bold) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
