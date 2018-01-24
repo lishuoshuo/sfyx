@@ -583,6 +583,54 @@ body {
                     background-color:$co10;
                 }
             }
+            >.main-box{
+                float: right;
+                width: 1004px;
+                >#list{
+                    height: 34px;
+                    border: 1px solid #dbdbdb;
+                    width: 1002px;
+                    background-color: white;
+                    @extend %legacy-pie-clearfix;
+                    >li{
+                        float: left;
+                        height: 34px;
+                        line-height: 34px;
+                        text-align: center;
+                        border-right: 1px solid #dadada;
+                        border-bottom: 1px solid #dadada;
+                        background-color: #ffffff;
+                        color: #565656;
+                        padding: 0 25px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        &.btnlist{
+                            background-color: #6c9c0a;
+                            border-right: 1px solid #6c9c0a;
+                            border-bottom: 1px solid #6c9c0a;
+                            color: #fff;
+                        }
+                    }
+                }
+                >#content{
+                    height: 500px;
+                    width: 1002px;
+                    position: relative;
+                    >li{
+                        height: 500px;
+                        line-height: 500px;
+                        width: 1002px;
+                        position: absolute;
+                        font-size: 100px;
+                        background: #fff;
+                        display: none;
+                        &.contentbtn{
+                            z-index: 1;
+                            display: block;
+                        }
+                    }
+                }
+            }
         }
     }
 }

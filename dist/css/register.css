@@ -1,0 +1,246 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, p, a, em, font, img, strong, b, dl, dt, dd, form, label, ol, ul, li, legend, span, input {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #000;
+  line-height: 12px; }
+
+body {
+  font: 12px/150% Arial,Verdana,"宋体"; }
+
+img {
+  vertical-align: top;
+  display: block;
+  border: none; }
+
+a,
+input {
+  outline: none; }
+
+em,
+i {
+  font-style: normal; }
+
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal; }
+
+table {
+  border-collapse: collapse; }
+
+body > .header, body > .tabBox {
+  *zoom: 1; }
+  body > .header:after, body > .tabBox:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+
+body {
+  background: #f5f5f5 none repeat scroll 0 0;
+  color: #515151; }
+  body > .header {
+    width: 1000px;
+    height: 75px;
+    margin: 10px auto; }
+    body > .header > .header_l {
+      width: 300px;
+      height: 75px;
+      float: left; }
+      body > .header > .header_l > img {
+        height: 100%;
+        width: 100%; }
+    body > .header > .header_r {
+      float: left;
+      line-height: 70px;
+      font-size: 24px;
+      padding-left: 3px;
+      font-family: "微软雅黑";
+      color: #515151; }
+  body > .tabBox {
+    width: 666px;
+    margin: 0 auto;
+    padding-left: 333px;
+    height: 37px; }
+    body > .tabBox > .reg_show {
+      background: url(../images/tabbg.jpg) left top no-repeat;
+      font-size: 16px;
+      cursor: pointer;
+      position: relative;
+      top: 1px;
+      width: 163px;
+      height: 38px;
+      line-height: 38px;
+      font-family: "微软雅黑";
+      display: block;
+      float: left;
+      text-align: center; }
+    body > .tabBox > .login {
+      width: 130px;
+      float: right;
+      padding-top: 14px;
+      font-size: 12px;
+      color: #565656; }
+      body > .tabBox > .login > a {
+        color: #6e9b0c; }
+  body > .reg_main {
+    border-top: 1px solid #d6d5d5;
+    padding: 45px 0 0 40px;
+    height: auto !important;
+    min-height: 490px;
+    width: 960px;
+    background: #fff;
+    margin: 0 auto; }
+    body > .reg_main > ul {
+      background: url(../images/pic10.jpg) 460px 0px no-repeat;
+      position: relative;
+      left: 0;
+      top: 0; }
+      body > .reg_main > ul > li {
+        line-height: 38px;
+        height: 38px; }
+        body > .reg_main > ul > li.regMb30 {
+          margin-bottom: 30px; }
+        body > .reg_main > ul > li > label {
+          width: 118px;
+          font-size: 14px;
+          color: #515151;
+          height: 38px;
+          line-height: 38px;
+          text-align: right;
+          display: block;
+          float: left; }
+          body > .reg_main > ul > li > label > font {
+            color: #ff4800; }
+        body > .reg_main > ul > li > span {
+          border: 1px solid #cdcdcd;
+          width: 268px;
+          height: 36px;
+          line-height: 36px;
+          display: block;
+          float: left; }
+          body > .reg_main > ul > li > span.regM > input {
+            font-family: "微软雅黑";
+            font-size: 12px;
+            font-weight: inherit;
+            vertical-align: middle; }
+          body > .reg_main > ul > li > span.regM > .regInput {
+            display: block;
+            float: left;
+            width: 228px;
+            height: 36px;
+            line-height: 36px;
+            border: none;
+            outline: none;
+            color: #515151;
+            padding: 0 5px; }
+          body > .reg_main > ul > li > span.regM > em.regOk {
+            background: url(../images/icon4.jpg) center no-repeat;
+            width: 23px;
+            height: 36px;
+            display: none;
+            float: left; }
+          body > .reg_main > ul > li > span.regM.okBorder {
+            border: 1px solid #6c9c0a; }
+          body > .reg_main > ul > li > span.regB {
+            border: none;
+            margin-left: 10px; }
+          body > .reg_main > ul > li > span.regc {
+            line-height: 18px; }
+        body > .reg_main > ul > li.safetyLayer {
+          color: #666;
+          padding-top: 5px;
+          padding-left: 191px; }
+          body > .reg_main > ul > li.safetyLayer > font {
+            display: block;
+            float: left;
+            height: 16px;
+            line-height: 16px; }
+          body > .reg_main > ul > li.safetyLayer > em {
+            background: #c4c4c4;
+            text-align: center;
+            width: 34px;
+            margin-right: 2px;
+            color: #fff;
+            display: block;
+            float: left;
+            height: 16px;
+            line-height: 16px; }
+            body > .reg_main > ul > li.safetyLayer > em.ok {
+              background: #f79100; }
+        body > .reg_main > ul > li.regPl88 {
+          padding-left: 88px; }
+          body > .reg_main > ul > li.regPl88 > span {
+            border: none; }
+            body > .reg_main > ul > li.regPl88 > span > a font {
+              color: #6e9b0c; }
+        body > .reg_main > ul > li.register {
+          padding-left: 88px;
+          margin-top: 10px;
+          margin-left: 29px; }
+          body > .reg_main > ul > li.register > a.registerNow {
+            display: block;
+            float: left;
+            width: 271px;
+            height: 38px;
+            background: url(../images/reg_btn.jpg) left top no-repeat;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+            margin-right: 20px;
+            line-height: 38px; }
+        body > .reg_main > ul > li.yanz {
+          margin-bottom: 10px; }
+          body > .reg_main > ul > li.yanz > .regCodeInput {
+            float: left;
+            padding: 0 5px;
+            width: 58px;
+            height: 36px;
+            line-height: 36px\9; }
+            body > .reg_main > ul > li.yanz > .regCodeInput.okBorders {
+              height: 38px;
+              width: 60px;
+              border: 1px solid #6c9c0a; }
+    body > .reg_main > .ui-reg-tip {
+      margin-top: 30px;
+      padding: 15px 10px 10px 45px;
+      border-top: 1px dotted #dcdcdc;
+      position: relative;
+      left: -30px;
+      width: 930px;
+      background: url(../images/reg_tip.png) no-repeat 25px 16px; }
+      body > .reg_main > .ui-reg-tip > a {
+        color: #669900; }
+  body > .footer {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px; }
+    body > .footer > span {
+      display: block;
+      color: #176246;
+      line-height: 26px;
+      margin: 0 auto;
+      text-align: center; }
+      body > .footer > span > a {
+        color: #666; }
+    body > .footer > p {
+      line-height: 26px;
+      margin: 0 auto;
+      text-align: center; }
+      body > .footer > p > a {
+        color: #515151; }

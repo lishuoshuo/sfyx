@@ -14,8 +14,11 @@ requirejs.config({
         "scrollT":"scripts/scrollTop",
         "list":"scripts/list",
         "cutout":"scripts/cutout",
-        "listnum":"scripts/listnum"
+        "listnum":"scripts/listnum",
+        "times":"scripts/times",
         /*"goodslist":"scripts/goodslist",
         "shopping":"scripts/shoppingcart", */
+        "register":"scripts/registers",
+        "tabs":"scripts/tabs"
     }
 })

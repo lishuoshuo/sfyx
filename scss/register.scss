@@ -1,0 +1,247 @@
+@import "rest";
+@import "mixin";
+@import "extend";
+@import "variable";
+body {
+    background: #f5f5f5 none repeat scroll 0 0;
+    color: #515151;
+    >.header {
+        width: 1000px;
+        height: 75px;
+        margin: 10px auto;
+        @extend %legacy-pie-clearfix;
+        >.header_l {
+            width: 300px;
+            height: 75px;
+            float: left;
+            >img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        >.header_r {
+            float: left;
+            line-height: 70px;
+            font-size: 24px;
+            padding-left: 3px;
+            font-family: "微软雅黑";
+            color: #515151;
+        }
+    }
+    >.tabBox {
+        width: 666px;
+        margin: 0 auto;
+        padding-left: 333px;
+        height: 37px;
+        @extend %legacy-pie-clearfix;
+        >.reg_show {
+            background: url(../images/tabbg.jpg) left top no-repeat;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            top: 1px;
+            width: 163px;
+            height: 38px;
+            line-height: 38px;
+            font-family: "微软雅黑";
+            display: block;
+            float: left;
+            text-align: center;
+        }
+        >.login {
+            width: 130px;
+            float: right;
+            padding-top: 14px;
+            font-size: 12px;
+            color: #565656;
+            >a {
+                color: #6e9b0c;
+            }
+        }
+    }
+    >.reg_main {
+        border-top: 1px solid #d6d5d5;
+        padding: 45px 0 0 40px;
+        height: auto !important;
+        min-height: 490px;
+        width: 960px;
+        background: #fff;
+        margin: 0 auto;
+        >ul {
+            background: url(../images/pic10.jpg) 460px 0px no-repeat;
+            position: relative;
+            left: 0;
+            top: 0;
+            >li {
+                line-height: 38px;
+                height: 38px;
+                &.regMb30 {
+                    margin-bottom: 30px;
+                }
+                >label {
+                    width: 118px;
+                    font-size: 14px;
+                    color: #515151;
+                    height: 38px;
+                    line-height: 38px;
+                    text-align: right;
+                    display: block;
+                    float: left;
+                    >font {
+                        color: #ff4800;
+                    }
+                }
+                >span {
+                    border: 1px solid #cdcdcd;
+                    width: 268px;
+                    height: 36px;
+                    line-height: 36px;
+                    display: block;
+                    float: left;
+                    &.regM {
+                        >input {
+                            font-family: "微软雅黑";
+                            font-size: 12px;
+                            font-weight: inherit;
+                            vertical-align: middle;
+                           
+                        }
+                        >.regInput {
+                            display: block;
+                            float: left;
+                            width: 228px;
+                            height: 36px;
+                            line-height: 36px;
+                            border: none;
+                            outline: none;
+                            color: #515151;
+                            padding: 0 5px;
+                        }
+                        >em {
+                            &.regOk {
+                                background: url(../images/icon4.jpg) center no-repeat;
+                                width: 23px;
+                                height: 36px;
+                                display: none;
+                                float: left;
+                            }
+                        }
+                        &.okBorder {
+                            border: 1px solid $co42;
+                        }
+                    }
+                    &.regB{
+                        border:none;
+                        margin-left: 10px;
+                    }
+                    &.regc{
+                        line-height: 18px;
+                    }
+                }
+                &.safetyLayer {
+                    color: #666;
+                    padding-top: 5px;
+                    padding-left: 191px;
+                    >font {
+                        display: block;
+                        float: left;
+                        height: 16px;
+                        line-height: 16px;
+                    }
+                    >em {
+                        background: #c4c4c4;
+                        text-align: center;
+                        width: 34px;
+                        margin-right: 2px;
+                        color: #fff;
+                        display: block;
+                        float: left;
+                        height: 16px;
+                        line-height: 16px;
+                        &.ok {
+                            background: #f79100;
+                        }
+                    }
+                }
+                &.regPl88 {
+                    padding-left: 88px;
+                    >span {
+                        border: none;
+                        >a font {
+                            color: #6e9b0c;
+                        }
+                    }
+                }
+                &.register {
+                    padding-left: 88px;
+                    margin-top: 10px;
+                    margin-left: 29px;
+                    >a.registerNow {
+                        display: block;
+                        float: left;
+                        width: 271px;
+                        height: 38px;
+                        background: url(../images/reg_btn.jpg) left top no-repeat;
+                        font-size: 16px;
+                        text-align: center;
+                        color: #fff;
+                        margin-right: 20px;
+                        line-height: 38px;
+                    }
+                }
+                &.yanz {
+                    margin-bottom: 10px;
+                    >.regCodeInput {
+                        float: left;
+                        padding: 0 5px;
+                        width: 58px;
+                        height: 36px;
+                        line-height: 36px\9;
+                        &.okBorders {
+                            height: 38px;
+                            width: 60px;
+                            border: 1px solid $co42;
+                        }
+                    }
+                   
+                }
+                
+            }
+        }
+        >.ui-reg-tip {
+            margin-top: 30px;
+            padding: 15px 10px 10px 45px;
+            border-top: 1px dotted #dcdcdc;
+            position: relative;
+            left: -30px;
+            width: 930px;
+            background: url(../images/reg_tip.png) no-repeat 25px 16px;
+            >a {
+                color: #669900;
+            }
+        }
+    }
+    >.footer {
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 20px;
+        >span {
+            display: block;
+            color: #176246;
+            line-height: 26px;
+            margin: 0 auto;
+            text-align: center;
+            >a {
+                color: #666;
+            }
+        }
+        >p{
+            line-height: 26px;
+            margin: 0 auto;
+            text-align: center;
+            >a{
+                color: #515151;
+            }
+        }
+    }
+}

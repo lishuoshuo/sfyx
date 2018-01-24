@@ -41,9 +41,9 @@ h6 {
 table {
   border-collapse: collapse; }
 
-.pWrap, .pWrap > .pItems, .pWrap > .pItems > .pItemsMain > .pItemsName, .pWrap > .pItems > .pItemsMain > .pItemsPromo, .pWrap > .pItems > .pItemsMain > .pItemsChoose > .chooseBtns, .pWrap > .pItems > .pItemsMain > .pItemsChoose > .chooseBtns > .pAmount, .pWrap > .pItemsSide > .sideWrap > .points > ul {
+.pWrap, .pWrap > .pItems, .pWrap > .pItems > .pItemsMain > .pItemsName, .pWrap > .pItems > .pItemsMain > .pItemsPromo, .pWrap > .pItems > .pItemsMain > .pItemsChoose > .chooseBtns, .pWrap > .pItems > .pItemsMain > .pItemsChoose > .chooseBtns > .pAmount, .pWrap > .pItemsSide > .sideWrap > .points > ul, .pWrap > .main-box > #list {
   *zoom: 1; }
-  .pWrap:after, .pWrap > .pItems:after, .pWrap > .pItems > .pItemsMain > .pItemsName:after, .pWrap > .pItems > .pItemsMain > .pItemsPromo:after, .pWrap > .pItems > .pItemsMain > .pItemsChoose > .chooseBtns:after, .pWrap > .pItems > .pItemsMain > .pItemsChoose > .chooseBtns > .pAmount:after, .pWrap > .pItemsSide > .sideWrap > .points > ul:after {
+  .pWrap:after, .pWrap > .pItems:after, .pWrap > .pItems > .pItemsMain > .pItemsName:after, .pWrap > .pItems > .pItemsMain > .pItemsPromo:after, .pWrap > .pItems > .pItemsMain > .pItemsChoose > .chooseBtns:after, .pWrap > .pItems > .pItemsMain > .pItemsChoose > .chooseBtns > .pAmount:after, .pWrap > .pItemsSide > .sideWrap > .points > ul:after, .pWrap > .main-box > #list:after {
     content: "\0020";
     display: block;
     height: 0;
@@ -517,3 +517,43 @@ table {
       overflow: hidden;
       margin-bottom: 10px;
       background-color: #ffffff; }
+  .pWrap > .main-box {
+    float: right;
+    width: 1004px; }
+    .pWrap > .main-box > #list {
+      height: 34px;
+      border: 1px solid #dbdbdb;
+      width: 1002px;
+      background-color: white; }
+      .pWrap > .main-box > #list > li {
+        float: left;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        border-right: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
+        background-color: #ffffff;
+        color: #565656;
+        padding: 0 25px;
+        cursor: pointer;
+        overflow: hidden; }
+        .pWrap > .main-box > #list > li.btnlist {
+          background-color: #6c9c0a;
+          border-right: 1px solid #6c9c0a;
+          border-bottom: 1px solid #6c9c0a;
+          color: #fff; }
+    .pWrap > .main-box > #content {
+      height: 500px;
+      width: 1002px;
+      position: relative; }
+      .pWrap > .main-box > #content > li {
+        height: 500px;
+        line-height: 500px;
+        width: 1002px;
+        position: absolute;
+        font-size: 100px;
+        background: #fff;
+        display: none; }
+        .pWrap > .main-box > #content > li.contentbtn {
+          z-index: 1;
+          display: block; }

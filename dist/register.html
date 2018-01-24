@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>顺丰优选 SF-best</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_l">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="header_r">欢迎注册</div>
+    </div>
+    <div class="tabBox">
+        <span class="reg_hide reg_show regMr5" id="regper">个人用户</span>
+        <div class="login">已有账号，立即
+            <a href="login.html">登录</a>
+        </div>
+    </div>
+    <div class="reg_main">
+        <ul class="individualUserBg">
+            <li class="regMb30">
+                <label>
+                    <font>*</font> 账户名：</label>
+                <span class="regM">
+                    <input id="username" name="userMam" class="regInput" type="text">
+                    <em class="regOk"></em>
+                </span>
+                <span class="regB" id="userM" style="display:none;">请输入您的手机号</span>
+            </li>
+            <li>
+                <label>
+                    <font>*</font> 登录密码：</label>
+                <span class="regM">
+                    <input id="userpass" name="userMam" class="regInput" type="password">
+                    <em class="regOk"></em>
+                </span> 
+                <span class="regB regc" id="passPrompt" style="display:none;">6-20位字符，可使用小字母、数字、大写字母。
+                    <br>不建议使用纯数字字或字母组合。</span>
+            </li>
+            <li class="safetyLayer regPl191" id="pwdStrong">
+                <font style="font-size:12px;">安全程度：</font>
+                <em class="default">弱</em>
+                <em class="default">中</em>
+                <em class="default">强</em>
+            </li>
+            <li class="regMb30">
+                <label>
+                    <font>*</font> 确认密码：</label>
+                <span class="regM">
+                    <input id="userpassW" name="userMam" class="regInput" type="password">
+                    <em class="regOk"></em>
+                </span>
+                <span class="regB" id="wordPrompt" style="display:none;">请再次确认输入密码</span>
+            </li>
+            <li class="yanz">
+                <label>
+                    <font></font> 验证码：</label>
+                <input type="text" id="yanz" class="regCodeInput">
+                <img id="code_img1" src="images/yanz.png" width="106" height="36" border="0" class="floatleft regMl6">
+            </li>
+            <li class="regPl88">
+                <span class="regM" style="margin-left:29px">
+                    <input id="read" name="AgreeId" type="checkbox" checked="" onclick="ckAgree();">
+                    <a href="https://passport.sfbest.com/xy.html" target="_blank" class="checkTitle">我已阅读并同意
+                        <font style="font-size:12px;">《顺丰优选用户注册协议》</font>
+                    </a>
+                </span>
+            </li>
+            <li class="register">
+                <a href="javascript:void(0);" class="registerNow" id="enroll">立即注册</a>
+            </li>
+        </ul>
+        <div class="ui-reg-tip">
+            <a href="##" target="_blank">了解更多&gt;&gt;</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>
+            <a href="##" rel="nofollow" class="footerlink1">关于我们</a> |
+            <a href="##" rel="nofollow" class="footerlink1">联系我们</a> |
+            <a href="##" rel="nofollow" class="footerlink1">招聘人才</a> |
+            <a href="###" rel="nofollow" class="footerlink1">友情链接</a>
+        </span>
+        <p>
+            北京顺丰电子商务有限公司
+            <br> 北京市公安局顺义分局备案11011302000890号|
+            <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow" class="footerlink1">京ICP备12011349号</a>|
+            <a href="http://www.sfbest.com/www/174/461.html" target="_blank" rel="nofollow" class="footerlink1">企业营业执照</a>
+            <br> Copyright© 顺丰优选 sfbest.com 版权所有
+            <br>
+        </p>
+    </div>
+    <script src="scripts/require.js"></script>
+    <script src="scripts/register.js"></script>
+</body>
+
+</html>
