@@ -12,7 +12,9 @@ requirejs.config({
         "countdown":"scripts/countdown",
         "footer":"scripts/footer",
         "scrollT":"scripts/scrollTop",
-        "list":"scripts/list"
+        "list":"scripts/list",
+        "cutout":"scripts/cutout",
+        "listnum":"scripts/listnum"
         /*"goodslist":"scripts/goodslist",
         "shopping":"scripts/shoppingcart", */
     }

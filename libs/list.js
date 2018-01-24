@@ -1,27 +1,10 @@
-define(["jquery"],function(){
-    /* function List(){
-
-    }
-    List.prototype={
-        constructor:List,
-        init:function(ele){
-
-        }
-    }
-    return new List(); */
-
+define(["jquery"], function () {
     $.fn.extend({
         cul: function () {
-            this.find("li").on("click",function(){
-                $(this).children().first().attr("id","curr");
+            this.find("li").on("click", function () {
+                $(this).addClass("curr").stop().siblings().removeClass("curr").children().last().hide();
                 $(this).children().last().show();
             })
-            /* this.find("li:has(ul)").on("click", function () {
-                $(this).addClass(".curr");
-            })
-            this.find("li:has(ul)").on("mouseout", function () {
-                $(this).children().last().stop().hide();
-            }) */
         }
     })
 })

@@ -64,3 +64,12 @@
 @mixin YaHei17($size:16px, $line-height: 40px, $weight:bold) {
 	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
 }
+@mixin YaHei18($size:12px, $line-height: 20px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei19($size:16px, $line-height: 20px, $weight:normal) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}
+@mixin YaHei20($size:18px, $line-height: 30px, $weight:bold) {
+	font: $weight #{$size}/#{$line-height}  "Microsoft YaHei";
+}

@@ -3,8 +3,8 @@ require(['scripts/config.js'], function () { //加载配置文件
     function ($, fruitL ,recom,search,needs/* ,otab */,navbtn,supperBanner,times,counts,foots,scrollTo,lists/* ,supperBanner,pop,goodslist,shop */ ) {
          $(".lside").banner({
             src:[
-                "http://003.sfimg.cn/web//4dd1c456/4dd1c456e01da81600ba60e750c4f2b7.jpg",
                 "http://001.sfimg.cn/web//b54d4efb/b54d4efbf9ad4869e19d6d8fe3c8f9f2.jpg",
+                "http://003.sfimg.cn/web//4dd1c456/4dd1c456e01da81600ba60e750c4f2b7.jpg",
                 "http://004.sfimg.cn/web//50518c6a/50518c6a4ad26c71a9a688c27ca41be7.jpg",
                 "http://003.sfimg.cn/web//ff9c1917/ff9c1917cd210885b1b07d88e9fdcd69.jpg"
             ],
@@ -34,7 +34,8 @@ require(['scripts/config.js'], function () { //加载配置文件
         $(".fr").nav();
         $("#booksort").nav();
         times.init($("#timeLimit"));
-        //counts.init([02,59,52],["time1","time2","time3"]);
+        //倒计时功能
+        counts.init([02,59,52],["time1","time2","time3"]);
         $.getJSON("http://www.sfbest.com/ajax/GetHotSun/?callback=?",function(res){
            // console.log(res.data);
             $("#share").html(res.data);
@@ -45,7 +46,7 @@ require(['scripts/config.js'], function () { //加载配置文件
         $.post("http://www.sfbest.com/ajax/salesRank",function(res){
             // console.log(res.data);
              $("#salesRank").html(res);
-        });
-        $("#ulList").cul();
+         });
+        $(".lists").cul();
     })
 })

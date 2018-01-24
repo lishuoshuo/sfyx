@@ -1,0 +1,588 @@
+@import "rest";
+@import "mixin";
+@import "extend";
+@import "variable";
+body {
+    @at-root {
+        .linknav {
+            height: 20px;
+            line-height: 20px;
+            margin: 10px auto;
+            overflow: hidden;
+            width: 1200px;
+            >strong {
+                height: 20px;
+                line-height: 20px;
+                padding: 0 7px 0 10px;
+                >a {
+                    color: $color0;
+                    @include YaHei16;
+                }
+            }
+            >span {
+                height: 20px;
+                line-height: 20px;
+                font-family: "宋体";
+                color: $color0;
+                >a {
+                    color: $color0;
+                }
+            }
+        }
+    }
+    @at-root {
+        .pWrap {
+            width: $widths;
+            @include marginAuto();
+            margin-bottom: 10px;
+            position: relative;
+            @extend %legacy-pie-clearfix;
+            >.pItems {
+                @extend %float-left;
+                width: 978px;
+                background-color: $co35;
+                -webkit-box-shadow: 0 0 4px $co35;
+                box-shadow: 0 0 4px $co47;
+                position: relative;
+                z-index: 2;
+                @extend %legacy-pie-clearfix;
+                >.pView {
+                    @extend %float-left;
+                    width: 410px;
+                    position: relative;
+                    background-color: white;
+                    height: 410px;
+                    z-index: 92;
+                    >#pView {
+                        left: 10px;
+                        position: absolute;
+                        top: 20px;
+                        z-index: 100;
+                        width: 390px;
+                        margin-bottom: 20px;
+                    }
+                    >.pShare {
+                        position: absolute;
+                        top: 370px;
+                        border-top: 1px solid $co35;
+                        width: 390px;
+                        margin: 0 10px;
+                        zoom: 1;
+                        >.bdShare {
+                            padding: 5px 0 0 0;
+                            margin-bottom: 5px;
+                            float: left;
+                            width: 260px;
+                            >.bds_more {
+                                display: block;
+                                font-family: 'å®‹ä½“', Arial;
+                                height: 16px;
+                                float: left;
+                                cursor: pointer;
+                                padding-top: 6px;
+                                padding-bottom: 3px;
+                                padding-left: 22px;
+                                background: url(../images/is.png) no-repeat 0 5px
+                            }
+                            >a {
+                                display: block;
+                                font-family: 'å®‹ä½“', Arial;
+                                height: 16px;
+                                float: left;
+                                cursor: pointer;
+                                padding-top: 6px;
+                                padding-bottom: 3px;
+                                padding-left: 22px;
+                                background: url(../images/is.png) no-repeat;
+                                &.bds_qzone {
+                                    background-position: 0 -75px!important;
+                                }
+                                &.bds_tsina {
+                                    background-position: 0 -115px!important;
+                                }
+                                &.bds_tqq {
+                                    background-position: 0 -235px!important;
+                                }
+                                &.bds_renren {
+                                    background-position: 0 -195px!important;
+                                }
+                            }
+                        }
+                        >.pCollect {
+                            float: right;
+                            padding: 8px 0 0 20px;
+                            color: $co42;
+                            cursor: pointer;
+                            background: url(../images/productinfo.png) no-repeat -68px 11px;
+                            height: 20px;
+                            >a {
+                                color: $co42;
+                            }
+                        }
+                    }
+                }
+                >.pItemsMain {
+                    @extend %float-left;
+                    width: 568px;
+                    height: 410px;
+                    >.pItemsName {
+                        padding: 0 15px;
+                        margin: 10px 0;
+                        height: 60px;
+                        overflow: hidden;
+                        zoom: 1;
+                        @extend %legacy-pie-clearfix;
+                        >.owner_shop {
+                            @extend %float-left;
+                            display: inline-block;
+                            width: 37px;
+                            height: 18px;
+                            line-height: 18px;
+                            background-color: $co42;
+                            border-radius: 3px;
+                            text-align: center;
+                            color: $co10;
+                            margin-top: 7px;
+                            margin-right: 5px;
+                        }
+                        >h1 {
+                            @extend %float-left;
+                            color: $co48;
+                            @include YaHei20;
+                            margin-right: 16px;
+                        }
+                        >strong {
+                            @include YaHei20;
+                            color: $co21;
+                        }
+                    }
+                    >.pItemsPrice {
+                        background-color: $co49;
+                        height: 90px;
+                        zoom: 1;
+                        margin-bottom: 10px;
+                        border-bottom: 3px solid $co50;
+                        >.yj {
+                            position: absolute;
+                            top: 95px;
+                            left: 440px;
+                            font-size: 12px;
+                            color: #fff;
+                            text-decoration: line-through;
+                        }
+                        >.priceBox {
+                            @extend %float-left;
+                            overflow: hidden;
+                            zoom: 1;
+                            color: white;
+                            >span {
+                                @extend %float-left;
+                                padding: 53px 0 0 10px;
+                                height: 18px;
+                                line-height: 18px;
+                                font-size: 18px;
+                                font-family: 微软雅黑;
+                            }
+                            >strong {
+                                font-weight: normal;
+                                font-size: 40px;
+                                font-family: Arial, Helvetica, sans-serif;
+                                float: left;
+                                padding: 37px 0 0 0;
+                                height: 45px;
+                                line-height: 45px;
+                            }
+                        }
+                        >.p_btn {
+                            display: block;
+                            float: left;
+                            width: 82px;
+                            height: 24px;
+                            text-align: center;
+                            line-height: 24px;
+                            margin: 20px 0 0 15px;
+                            color: $co51;
+                            font-size: 12px;
+                            background-color: $co52;
+                            position: absolute;
+                            top: 68px;
+                            right: 212px;
+                        }
+                        >.daoJiShi {
+                            float: right;
+                            padding: 10px 20px 0 0;
+                            color: white;
+                            position: absolute;
+                            right: 0;
+                        }
+                        >.boxWb {
+                            width: 5px;
+                            height: 96px;
+                            background: url(../images/productinfo.png) no-repeat -271px -121px;
+                            position: absolute;
+                            right: -5px;
+                        }
+                    }
+                    >.pItemsPromo {
+                        margin-bottom: 6px;
+                        padding: 5px 5px 0 5px;
+                        @extend %legacy-pie-clearfix;
+                        >.dt {
+                            @extend %float-left;
+                            width: 90px;
+                            text-align: right;
+                            line-height: 20px;
+                            color: $co53;
+                        }
+                        >.promotion {
+                            padding-bottom: 6px;
+                            color: $color0;
+                            >.ct {
+                                float: left;
+                                width: 52px;
+                                height: 18px;
+                                text-align: center;
+                                border: 1px solid $co54;
+                                color: $co54;
+                                padding: 0 2px;
+                                margin-right: 10px;
+                                line-height: 18px;
+                            }
+                            >.cm {
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                    >.pItemsSend {
+                        margin-bottom: 16px;
+                        padding-left: 95px;
+                        color: $co49;
+                        font-size: 12px;
+                        line-height: 12px;
+                    }
+                    >.pItemsChoose {
+                        border-top: 1px solid $co39;
+                        padding-top: 10px;
+                        margin: 0 20px;
+                        >.chooseBtns {
+                            margin: 10px 0;
+                            position: relative;
+                            height: 45px;
+                            @extend %legacy-pie-clearfix;
+                            >.pAmount {
+                                width: 81px;
+                                @extend %float-left;
+                                margin-right: 10px;
+                                overflow: hidden;
+                                @extend %legacy-pie-clearfix;
+                                >span {
+                                    @extend %float-left;
+                                    >.text {
+                                        width: 53px;
+                                        height: 43px;
+                                        border: 1px solid $co40;
+                                        overflow: hidden;
+                                        font-size: 18px;
+                                        text-align: center;
+                                        line-height: 43px;
+                                        // color: $co55;
+                                        font-family: 宋体;
+                                    }
+                                    >a {
+                                        height: 21px;
+                                        width: 25px;
+                                        border-top: 1px solid #dadada;
+                                        border-right: 1px solid #dadada;
+                                        text-align: center;
+                                        line-height: 21px;
+                                        display: block;
+                                        overflow: hidden;
+                                        text-decoration: none;
+                                        cursor: pointer;
+                                        color: #6b6b6b;
+                                        font-size: 14px;
+                                        font-family: 宋体;
+                                        overflow: hidden;
+                                        &.p-reduce {
+                                            border-bottom: 1px solid #dadada;
+                                        }
+                                    }
+                                }
+                            }
+                            >.pBtn {
+                                @extend %float-left;
+                                margin-right: 10px;
+                                >a {
+                                    width: 130px;
+                                    height: 45px;
+                                    background-color: $co42;
+                                    display: block;
+                                    border-radius: 2px;
+                                    text-align: center;
+                                    padding: 0 0 0 30px;
+                                    color: $co10;
+                                    font-family: å¾®è½¯é›…é»‘;
+                                    font-size: 18px;
+                                    line-height: 45px;
+                                    position: relative;
+                                    cursor: pointer;
+                                    >b {
+                                        position: absolute;
+                                        top: 12px;
+                                        left: 18px;
+                                        width: 22px;
+                                        height: 20px;
+                                        background: url(../images/productinfo.png) no-repeat -269px -72px;
+                                        display: block;
+                                    }
+                                }
+                                &.quickBuy a {
+                                    background-color: $co49;
+                                    padding: 0;
+                                }
+                            }
+                            >.phone_client {
+                                cursor: pointer;
+                                position: relative;
+                                float: left;
+                                width: 90px;
+                                height: 40px;
+                                border: 1px solid $co50;
+                                background: $co36 url(../images/phone.jpg) 10px center no-repeat;
+                                padding-left: 34px;
+                                padding-top: 3px;
+                                color: $co37;
+                                >#phone_time em {
+                                    color: $co21;
+                                }
+                                &:hover {
+                                    border: 1px solid $co42;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            >.pItemsSide {
+                float: right;
+                width: 222px;
+                overflow: hidden;
+                background-color: $co10;
+                position: relative;
+                z-index: 1;
+                >.sideWrap {
+                    >.points {
+                        padding-top: 20px;
+                        margin: 0 10px;
+                        overflow: hidden;
+                        >ul {
+                            width: 204px;
+                            border-bottom: 1px dashed $co17;
+                            overflow: hidden;
+                            zoom: 1;
+                            @extend %legacy-pie-clearfix;
+                            >li {
+                                float: left;
+                                width: 67px;
+                                border-right: 1px dashed $co17;
+                                height: 65px;
+                                text-align: center;
+                                >img {
+                                    width: 49px;
+                                    height: 59px;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                    >.temperature {
+                        padding: 10px 0 10px 10px;
+                        margin: 0 10px;
+                        >.ct {
+                            color: #666666;
+                            margin-bottom: 6px;
+                        }
+                        >.cm {
+                            margin-left: 5px;
+                            background: url(../images/temperature1.jpg) no-repeat;
+                            width: 171px;
+                            height: 34px;
+                            display: block
+                        }
+                    }
+                }
+                >.pdetail {
+                    padding: 10px;
+                    margin: 0 10px;
+                    border-top: 1px solid $color8;
+                    >ul {
+                        li {
+                            height: 16px;
+                            line-height: 16px;
+                            margin-bottom: 8px;
+                            overflow: hidden;
+                            color: $color0;
+                            &.lis {
+                                line-height: 30px;
+                                height: 30px;
+                                span {
+                                    float: left;
+                                }
+                            }
+                            >span a {
+                                color: $color0;
+                            }
+                            &.card-pay {
+                                height: 25px;
+                                width: 182px;
+                                position: relative;
+                                font-family: 微软雅黑;
+                                border-width: 1px;
+                                border-style: solid;
+                                border-color: rgb(227, 227, 227);
+                                border-image: initial;
+                                border-radius: 10px;
+                                >.card-pay-left {
+                                    display: inline-block;
+                                    color: #fff;
+                                    position: absolute;
+                                    left: 0px;
+                                    background: #ee4040;
+                                    border-radius: 10px;
+                                    padding: 0px 8px;
+                                    line-height: 25px;
+                                    font-style: italic;
+                                }
+                                >.card-pay-right {
+                                    display: inline-block;
+                                    color: #669900;
+                                    position: absolute;
+                                    left: 64px;
+                                    line-height: 25px;
+                                }
+                            }
+                        }
+                    }
+                    >.nosupport {
+                        height: 23px;
+                        border: 1px solid $co17;
+                        border-radius: 10px;
+                        position: relative;
+                        padding: 0 0 0 23px;
+                        line-height: 23px;
+                        background-color: $co35;
+                        color: $color3;
+                        >b {
+                            position: absolute;
+                            width: 13px;
+                            height: 14px;
+                            background: url(../images/productinfo.png) no-repeat -173px -28px;
+                            top: 5px;
+                            left: 5px;
+                        }
+                    }
+                }
+                >.pcommdetail {
+                    border-top: 1px solid $color8;
+                    >.prate {
+                        padding: 5px 10px 0 20px;
+                        overflow: hidden;
+                        zoom: 1;
+                        >dt {
+                            font-weight: bold;
+                            float: left;
+                            line-height: 30px;
+                            color: $color0;
+                        }
+                        >dd {
+                            display: block;
+                            overflow: hidden;
+                            zoom: 1;
+                            >.dd {
+                                float: left;
+                                width: 80px;
+                                height: 8px;
+                                background-color: $co59;
+                                margin: 12px 5px 0 5px;
+                                overflow: hidden;
+                                _display: inline;
+                                >span {
+                                    height: 8px;
+                                    // background-color: $co60;
+                                    display: block;
+                                    overflow: hidden;
+                                }
+                            }
+                            >strong {
+                                font-size: 24px;
+                                font-family: 微软雅黑;
+                                color: rgb(250, 130, 0);
+                                zoom: 1;
+                                line-height: 22px;
+                                overflow: hidden;
+                                >span {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    >.pcomment {
+                        padding: 0 20px;
+                        >dt a {
+                            color: $co42;
+                        }
+                        >dd {
+                            color: $color5;
+                            padding-top: 6px;
+                            position: relative;
+                            >b {
+                                position: absolute;
+                                top: 0;
+                                border-color: $co58 $co58 $co56 $co58;
+                                border-style: dashed dashed solid dashed;
+                                border-width: 0 5px 6px 5px;
+                                display: inline-block;
+                                font-size: 0;
+                                height: 0;
+                                overflow: hidden;
+                                width: 0;
+                                left: 30px;
+                            }
+                            >div {
+                                border: 1px solid $co56;
+                                padding: 8px 10px;
+                                >span {
+                                    display: block;
+                                    line-height: 20px;
+                                    height: 60px;
+                                    overflow: hidden;
+                                    word-break: break-all;
+                                    >a {
+                                        color: $color5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @at-root {
+        .pWrap{
+            width: 1200px;
+            margin: 0 auto;
+            @extend %legacy-pie-clearfix;
+            >.left-box{
+                @extend %float-left;
+                width: 186px;
+                >.catlist{
+                    border: 1px solid $co40;
+                    overflow: hidden;
+                    margin-bottom: 10px;
+                    background-color:$co10;
+                }
+            }
+        }
+    }
+}

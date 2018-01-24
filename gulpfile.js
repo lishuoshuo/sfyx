@@ -35,7 +35,7 @@ gulp.task("images",()=>{
 				.pipe(gulp.dest("dist/images")) ;
 });
 gulp.task("sass",()=>{
-	 return gulp.src('scss/*.scss')
+	 return gulp.src('scss/**')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/css'));
 })

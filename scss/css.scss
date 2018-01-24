@@ -762,10 +762,10 @@ body {
                     z-index: 30;
                     margin-left: 200px;
                     background: yellowgreen;
-                    >.supperbanner_img_contants{
+                    >.supperbanner_img_contants {
                         height: 480px;
                         position: relative;
-                        >li{
+                        >li {
                             height: 480px;
                             position: relative;
                         }
@@ -773,16 +773,14 @@ body {
                     >.supperbanner_btn_wrap {
                         position: absolute;
                         z-index: 3;
-                        
                         width: 150px;
                         height: 28px;
                         line-height: 28px;
                         border-radius: 15px;
                         bottom: 20px;
-                        left: 50%;
+                        left: 40%;
                         margin-left: -75px;
                         text-align: center;
-                        
                         >span {
                             cursor: pointer;
                             width: 11px;
@@ -791,13 +789,12 @@ body {
                             margin: 8px 5px;
                             background-color: #fff;
                             border-radius: 5px;
-                            &.on{
+                            &.on {
                                 background-color: $color9;
                             }
                         }
                     }
                 }
-                
             }
         }
     }
@@ -1009,7 +1006,7 @@ body {
                                 }
                             }
                             >ul.time {
-                                width: 200px;
+                                width: 240px;
                                 height: 40px;
                                 margin-top: -4px;
                                 @extend %float-left;
@@ -2101,10 +2098,11 @@ body {
         }
     }
     @at-root {
+        //列表页
         .content_list {
             width: $widths;
             @include marginAuto();
-            @extend %legacy-pie-clearfix;
+            @extend %legacy-pie-clearfix; //列表页-left
             >.left-box {
                 @extend %float-left;
                 width: 186px;
@@ -2114,17 +2112,23 @@ body {
                     border-style: solid;
                     overflow: hidden;
                     width: 184px;
-                    >h3 {
+                    >.ct {
                         height: 40px;
                         padding: 0 7px 0 10px;
                         @include YaHei17;
                         background: $co35;
                         border-bottom: 1px solid $co40;
                     }
-                    >ul {
-                        >li {
-                            &:nth-child(1){
-                                border-top:none;
+                    >.lists {
+                        >.catitem {
+                            &.curr h3 b {
+                                background: url(../images/productList.png) -14px 0 no-repeat;
+                            }
+                            &:nth-child(1) {
+                                border-top: none;
+                                >.listShow {
+                                    display: block;
+                                }
                             }
                             border-top: 1px dashed $co40;
                             >h3 {
@@ -2162,12 +2166,342 @@ body {
                         }
                     }
                 }
+            } //列表页-right
+            >.main-box {
+                @extend %float-right;
+                width: 1004px; //salesRank
+                >.salesRank {
+                    margin-bottom: 10px;
+                    border: 1px solid $co40;
+                    >.attr {
+                        border-top: 1px dashed $co40;
+                        overflow: hidden;
+                        padding: 5px 0;
+                        zoom: 1;
+                        &.attr_t {
+                            border-top: none;
+                        }
+                        >h3 {
+                            @extend %float-left;
+                            font-weight: bold;
+                            line-height: 25px;
+                            text-align: right;
+                            width: 100px;
+                            color: $co42;
+                        }
+                        >.attr_r {
+                            overflow: hidden;
+                            zoom: 1;
+                            position: relative;
+                            >.v-list {
+                                @extend %float-left;
+                                width: 840px;
+                                >ul {
+                                    overflow: hidden;
+                                    zoom: 1;
+                                    @extend %legacy-pie-clearfix;
+                                    >li {
+                                        float: left;
+                                        width: 160px;
+                                        height: 22px;
+                                        padding-top: 3px;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        margin-right: 8px;
+                                        >a {
+                                            color: $color0;
+                                            >span {
+                                                color: $co43;
+                                            }
+                                        }
+                                        &.hides {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                            >.v-show {
+                                display: block;
+                                zoom: 1;
+                                height: 20px;
+                                padding-top: 5px;
+                                padding-right: 10px;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                &.hideShow {
+                                    display: none;
+                                }
+                                >span {
+                                    @extend %float-right;
+                                    width: 36px;
+                                    cursor: pointer;
+                                    color: $co42;
+                                    >b {
+                                        @extend %float-right;
+                                        background: url(../images/productList.png) no-repeat 0 -14px;
+                                        width: 9px;
+                                        height: 5px;
+                                        margin-top: 7px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                >.r-filter {
+                    border: 1px solid $co40;
+                    background-color: $co35;
+                    width: 1002px;
+                    margin-bottom: 10px;
+                    >.f-sort {
+                        height: 24px;
+                        border-bottom: 1px solid $co40;
+                        padding: 5px 15px;
+                        overflow: hidden;
+                        zoom: 1;
+                        @extend %legacy-pie-clearfix;
+                        >.sort {
+                            @extend %float-left;
+                            width: 400px;
+                            >ul {
+                                @extend %legacy-pie-clearfix;
+                                >li {
+                                    @extend %float-left;
+                                    /* &.curr a {
+                                        border: 1px solid $co42;
+                                        background-color: $co42;
+                                        color: $co10;
+                                    } */
+                                    >a {
+                                        width: 64px;
+                                        height: 22px;
+                                        line-height: 22px;
+                                        text-align: center;
+                                        border: 1px solid $co40;
+                                        border-left: 0 none;
+                                        background-color: $co10;
+                                        position: relative;
+                                        display: block;
+                                    }
+                                    &.up b {
+                                        position: absolute;
+                                        right: 9px;
+                                        height: 8px;
+                                        width: 7px;
+                                        background: url(../images/productList.png) no-repeat -52px 0;
+                                        top: 8px;
+                                        overflow: hidden;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    >.f-stock {
+                        height: 26px;
+                        padding: 5px 15px;
+                        >.rowFilter {
+                            margin-top: 5px;
+                            >form {
+                                display: block;
+                                >span {
+                                    margin-left: 5px;
+                                    color: $color5;
+                                    >input {
+                                        margin-right: 3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                >.p-list {
+                    width: 1004px;
+                    >ul {
+                        @extend %legacy-pie-clearfix;
+                        >li {
+                            float: left;
+                            width: 241px;
+                            height: 388px;
+                            padding: 5px;
+                            @extend %float-left;
+                            &:hover {
+                                padding: 0;
+                                border: 5px solid $co35;
+                                border-radius: 6px;
+                                >.l-wrap {
+                                    border: 1px solid $co40;
+                                    padding: 10px;
+                                    >.action .p-btn a {
+                                        background: url(../images/productlist_cart.png) no-repeat scroll 20px 10px #6B9C05;
+                                        color: $co10;
+                                        height: 30px;
+                                        line-height: 30px;
+                                        width: 105px;
+                                        border: 0 none;
+                                        border-radius: 2px;
+                                    }
+                                }
+                            }
+                            >.l-wrap {
+                                width: 219px;
+                                height: 366px;
+                                padding: 11px;
+                                position: relative;
+                                z-index: 1;
+                                >.pic {
+                                    height: 210px;
+                                    width: 219px;
+                                    >a {
+                                        display: block;
+                                        height: 210px;
+                                        >img {
+                                            width: $width;
+                                            height: $height;
+                                        }
+                                    }
+                                }
+                                >.price {
+                                    margin: 5px 0 3px 0;
+                                    height: 20px;
+                                    overflow: hidden;
+                                    zoom: 1;
+                                    >span {
+                                        @include YaHei18;
+                                        color: $co44;
+                                        margin-right: 2px;
+                                    }
+                                    >strong {
+                                        @include YaHei19;
+                                        color: $co44;
+                                    }
+                                }
+                                >.title-a {
+                                    height: 20px;
+                                    line-height: 20px;
+                                    overflow: hidden;
+                                    color: $color0;
+                                }
+                                >.title-b {
+                                    height: 20px;
+                                    line-height: 20px;
+                                    overflow: hidden;
+                                    color: $co45;
+                                }
+                                >.title-c {
+                                    line-height: 20px;
+                                    height: 20px;
+                                    width: 54px;
+                                    text-align: center;
+                                    >a {
+                                        background-color: $co42;
+                                        display: block;
+                                        color: $co10;
+                                        line-height: 20px;
+                                    }
+                                }
+                                >.comment {
+                                    color: $co46;
+                                    height: 20px;
+                                    line-height: 20px;
+                                    overflow: hidden;
+                                    >a {
+                                        color: $co46;
+                                    }
+                                    >.comment-r {
+                                        display: inline-block;
+                                        width: 37px;
+                                        height: 18px;
+                                        line-height: 18px;
+                                        background-color: $co42;
+                                        border-radius: 3px;
+                                        text-align: center;
+                                        color: $co10;
+                                        margin-left: 5px;
+                                    }
+                                }
+                                >.action {
+                                    margin-top: 5px;
+                                    @extend %legacy-pie-clearfix;
+                                    >.p-num {
+                                        @extend %float-left;
+                                        width: 68px;
+                                        height: 30px;
+                                        overflow: hidden;
+                                        zoom: 1;
+                                        margin-right: 12px;
+                                        >span {
+                                            width: 18px;
+                                            height: 28px;
+                                            border: 1px solid $co40;
+                                            @extend %float-left;
+                                            line-height: 28px;
+                                            text-align: center;
+                                            text-decoration: none;
+                                            cursor: pointer;
+                                            color: $co41;
+                                            &.numberInp {
+                                                width: 28px;
+                                                height: 28px;
+                                                line-height: 28px;
+                                                text-align: center;
+                                                border-left: none;
+                                                border-right: none;
+                                                font-size: 14px;
+                                                overflow: hidden;
+                                                color: $color3;
+                                            }
+                                        }
+                                    }
+                                    >.p-btn {
+                                        @extend %float-left;
+                                        width: 130px;
+                                        height: 30px;
+                                        >a {
+                                            background: url(../images/productlist_cart.png) no-repeat scroll 20px -21px;
+                                            font-family: "微软雅黑";
+                                            text-align: center;
+                                            border: 1px solid $co40;
+                                            border-radius: 2px;
+                                            cursor: pointer;
+                                            display: block;
+                                            font-size: 14px;
+                                            height: 28px;
+                                            line-height: 28px;
+                                            padding: 0 0 0 25px;
+                                            text-decoration: none;
+                                            width: 103px;
+                                            color: $co13;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    >.ulbtn {
+                        margin: 12px;
+                        text-align: right;
+                        font-size: 14px;
+                        padding: 0 0 10px 0;
+                        >span {
+                            margin: 2px;
+                            padding: 3px 6px;
+                            text-decoration: none;
+                            border: 1px solid #dadada;
+                            color: #6b6b6b;
+                            cursor:pointer;
+                            &.btncol {
+                                color: #ea5404;
+                                font-weight: bold;
+                                margin: 2px;
+                                padding: 3px 6px;
+                                border: 1px solid #ea5404;
+                               
+                            }
+                        }
+                    }
+                }
             }
-        }
-    }
-    @at-root {
-        #curr b {
-            background: url(../images/productList.png) -14px 0 no-repeat;
         }
     }
 }
