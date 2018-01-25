@@ -19,6 +19,8 @@ requirejs.config({
         /*"goodslist":"scripts/goodslist",
         "shopping":"scripts/shoppingcart", */
         "register":"scripts/registers",
-        "tabs":"scripts/tabs"
+        "tabs":"scripts/tabs",
+        "magnify":"scripts/magnify",
+        "banner":"scripts/jquery.supperBanner"
     }
 })
