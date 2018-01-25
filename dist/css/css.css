@@ -343,7 +343,8 @@ table {
       height: 36px;
       width: 100%;
       height: 36px;
-      display: block; }
+      display: block;
+      position: relative; }
       .header > .search > form > input {
         cursor: pointer; }
         .header > .search > form > input.inputl {
@@ -360,6 +361,16 @@ table {
           vertical-align: middle;
           background: url(../images/header.png) no-repeat -99px -179px;
           color: #efefef; }
+      .header > .search > form > #searcList {
+        width: 434px;
+        position: absolute;
+        z-index: 999;
+        top: 36px;
+        background: #fff; }
+        .header > .search > form > #searcList > li {
+          line-height: 30px;
+          padding: 0 6px;
+          color: #666; }
     .header > .search > .search_hot {
       padding: 4px 0px 0px 0px;
       height: 18px;
@@ -656,7 +667,7 @@ table {
           margin: 8px 5px;
           background-color: #fff;
           border-radius: 5px; }
-          .slide_show > .indexW > .lside > .supperbanner_btn_wrap > span.on {
+          .slide_show > .indexW > .lside > .supperbanner_btn_wrap > span.supperbanner_active {
             background-color: #fa9600; }
 
 .thefifthyear {

@@ -14,20 +14,6 @@ define(["jquery"], function () {
                 this.btn[i].index = i;
                 this.btn[i].onclick = this.btnIndex.bind(this);
             }
-            /*  this.btnB=btnB;
-             var ag=0;
-             var _this=this;
-             this.btnB.click(function(){
-                 ag++;
-                 console.log("点击"+ag+"次数")
-                 if(ag==1){
-                     _this.index==1;
-                 }else if(ag==2){
-                     _this.index==2;
-                 }else{
-                     _this.index==3;
-                 }
-             }) */
         },
         btnIndex: function (event) {
             var target = event.target;

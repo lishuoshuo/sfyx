@@ -376,6 +376,7 @@ body {
                     width: $width;
                     height: 36px;
                     display: block;
+                    position: relative;
                     >input {
                         @extend %float-left;
                         cursor: pointer;
@@ -394,6 +395,18 @@ body {
                             vertical-align: middle;
                             background: url(../images/header.png) no-repeat -99px -179px;
                             color: $color8;
+                        }
+                    }
+                    >#searcList{
+                        width: 434px;
+                        position: absolute;
+                        z-index: 999;
+                        top: 36px;
+                        background: #fff;
+                        >li{
+                            line-height: 30px;
+                            padding: 0 6px;
+                            color: #666;
                         }
                     }
                 }
@@ -789,7 +802,7 @@ body {
                             margin: 8px 5px;
                             background-color: #fff;
                             border-radius: 5px;
-                            &.on {
+                            &.supperbanner_active {
                                 background-color: $color9;
                             }
                         }

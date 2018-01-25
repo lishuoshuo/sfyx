@@ -95,7 +95,6 @@
 		            $btn_box.addClass("supperbanner_btn_wrap");
 		            var _this = this;
 		            $.each(this.opts.src, function (index, src) {
-		                console.log(src)
 		                var $li = $("<li></li>")
 		                $li.css({
 		                    width: "100%",

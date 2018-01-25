@@ -5,7 +5,6 @@ requirejs.config({
         "recommend": "scripts/recommend",
         "searchhot": "scripts/searchHot",
         "needsBuy": "scripts/needBuy",
-        //"tabs": "scripts/tab",
         "navtab": "scripts/navtab",
         "supperBanner": "scripts/jquery.banner",
         "timeMeter":"scripts/timemeter",
@@ -16,11 +15,11 @@ requirejs.config({
         "cutout":"scripts/cutout",
         "listnum":"scripts/listnum",
         "times":"scripts/times",
-        /*"goodslist":"scripts/goodslist",
-        "shopping":"scripts/shoppingcart", */
         "register":"scripts/registers",
         "tabs":"scripts/tabs",
         "magnify":"scripts/magnify",
-        "banner":"scripts/jquery.supperBanner"
+        "banner":"scripts/jquery.supperBanner",
+        "logins":"scripts/logins",
+        "vague":"scripts/vague"
     }
 })
