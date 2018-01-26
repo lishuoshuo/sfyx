@@ -14,20 +14,6 @@ define(["jquery"], function () {
                 this.btn[i].index = i;
                 this.btn[i].onclick = this.btnIndex.bind(this);
             }
-            /*  this.btnB=btnB;
-             var ag=0;
-             var _this=this;
-             this.btnB.click(function(){
-                 ag++;
-                 console.log("点击"+ag+"次数")
-                 if(ag==1){
-                     _this.index==1;
-                 }else if(ag==2){
-                     _this.index==2;
-                 }else{
-                     _this.index==3;
-                 }
-             }) */
         },
         btnIndex: function (event) {
             var target = event.target;
@@ -46,6 +32,7 @@ define(["jquery"], function () {
             if (!this.res) {
                 this.res = res;
             }
+            
             var rendringArr;
             //每页最多可加载16个商品
             rendringArr = this.res.slice(this.index * 16, (this.index + 1) * 16);
@@ -54,7 +41,7 @@ define(["jquery"], function () {
                 html += '<li>' +
                     '<div class="l-wrap">' +
                     '<div class="pic">' +
-                    '<a href="##">' +
+                    '<a href="' + item.src + '">' +
                     '<img src="' + item.tag_img + '" alt="">' +
                     '</a>' +
                     '</div>' +
@@ -68,12 +55,13 @@ define(["jquery"], function () {
                     '<div class="comment"><a href="##">' + item.evaluate + '</a><div class="comment-r">自营</div></div>' +
                     '<div class="action">' +
                     '<div class="p-num">' +
-                    '<span class="p-reduce">-</span>' +
+                    '<span class="p-reduce" id="addss">-</span>' +
                     '<span class="numberInp">1</span>' +
-                    '<span>+</span>' +
+                    '<span id="subtraction">+</span>' +
+                    '<div><span>-</span><span>+</span></div>'+
                     '</div>' +
                     '<div class="p-btn">' +
-                    '<a href="##">加入购物车</a>' +
+                    '<a href="'+item.src+'" class="btns" data-id="'+item.eid+'">加入购物车</a>' +
                     '</div>' +
                     '</div>' +
                     '</div>' +

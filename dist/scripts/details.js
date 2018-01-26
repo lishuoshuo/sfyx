@@ -1,6 +1,6 @@
 require(['scripts/config.js'], function () { //加载配置文件
-    require(["jquery", "list", "navtab", "searchhot", "cutout", "listnum", "footer", "times", "tabs","banner","magnify"],
-        function ($, lists, navs, search, cutouts, listn, foots, time, tab,banner,magnify) {
+    require(["jquery", "list", "navtab", "searchhot", "cutout", "listnum", "footer", "times", "tabs", "banner", "magnify"],
+        function ($, lists, navs, search, cutouts, listn, foots, time, tab, banner, magnify) {
             //商品左侧     
             $(".lists").cul();
 
@@ -23,9 +23,7 @@ require(['scripts/config.js'], function () { //加载配置文件
             tab.init($("#list>li"), $("#content>li"));
 
             //放大镜
-            console.log(1)
             new banner({
-
                 src: [
                     ["http://p02.sfbest.com/2017/4100279055/middle_4100279055_1_4.jpg"],
                     ["http://p02.sfbest.com/2017/4100279055/middle_4100279055_1_1.jpg"],

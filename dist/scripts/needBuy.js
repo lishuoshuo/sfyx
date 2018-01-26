@@ -13,7 +13,7 @@ define(["jquery"], function ($) {
                 var html = "";
                 res.upProduct.forEach(function (item) {
                     html += '<li>' +
-                        '<a href="##">' +
+                        '<a href="../dist/list.html">' +
                         '<p>' + item.name + '</p>' +
                         ' <h3>' +
                         ' <i>￥</i>' +
@@ -27,7 +27,7 @@ define(["jquery"], function ($) {
                 });
                 res.downProduct.forEach(function (item) {
                     html += '<li>' +
-                        '<a href="##">' +
+                        '<a href="../dist/list.html">' +
                         '<p>' + item.name + '</p>' +
                         ' <h3>' +
                         ' <i>￥</i>' +

@@ -31,7 +31,6 @@ define(["jquery", "cookie"], function ($) {
             } else {
                 $.cookie("shoppingCart", '[{"id":"' + dataId + '","num":"1"}]')
             }
-            console.log(this.getShop());
         },
         getShop: function () {
             if ($.cookie("shoppingCart")) {
