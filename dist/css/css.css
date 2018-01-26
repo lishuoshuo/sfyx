@@ -1772,7 +1772,8 @@ table {
               line-height: 30px;
               width: 105px;
               border: 0 none;
-              border-radius: 2px; }
+              border-radius: 2px;
+              outline: none; }
         .content_list > .main-box > .p-list > ul > li > .l-wrap {
           width: 219px;
           height: 366px;
@@ -1880,8 +1881,9 @@ table {
                 line-height: 28px;
                 padding: 0 0 0 25px;
                 text-decoration: none;
-                width: 103px;
-                color: #76ac25; }
+                width: 105px;
+                color: #76ac25;
+                outline: none; }
       .content_list > .main-box > .p-list > .ulbtn {
         margin: 12px;
         text-align: right;

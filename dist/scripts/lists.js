@@ -1,6 +1,6 @@
 require(['scripts/config.js'], function () { //加载配置文件
-    require(["jquery", "list", "navtab", "searchhot", "cutout", "listnum","footer"],
-        function ($, lists, navs, search, cutouts, listn, foots) {
+    require(["jquery", "list", "navtab", "searchhot", "cutout", "listnum","footer","shoppingcart"],
+        function ($, lists, navs, search, cutouts, listn, foots,shopping) {
             //商品左侧     
             $(".lists").cul();
 
@@ -21,7 +21,11 @@ require(['scripts/config.js'], function () { //加载配置文件
 
             //加载底部数据
             new foots().init($("#shopp"),$("#gives"),$("#pay"),$("#sell"),$("#seller"));
-
+            //console.log( shopping.init($(".p-btn")));
+           
+            setTimeout(function(){
+                shopping.init($("#listsnum li .btns"));
+            },500)
         }
     )
 })

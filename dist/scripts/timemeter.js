@@ -25,7 +25,7 @@ define(["jquery"], function () {
             var html = "";
             res.nowList.forEach(function (item) {
                 html += '<li>' +
-                    '<a href="#">' +
+                    '<a href="../dist/list.html">' +
                     '<div class="bImg">' +
                     '<img src="'+item.img+'" alt="">' +
                     '</div>' +
@@ -39,8 +39,6 @@ define(["jquery"], function () {
                     '</a>' +
                     '</li>'
             });
-            // /console.log(html);
-            // /console.log(this.ele)
             this.ele.html(html);
         }
     }

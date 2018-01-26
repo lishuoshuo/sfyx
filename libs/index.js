@@ -18,6 +18,7 @@ require(['scripts/config.js'], function () { //加载配置文件
                 autoplay: true
             }, $(".lside"));
 
+            //加载各个楼层数据
             new fruitL().init($("#fruitList"), "http://www.sfbest.com/ajaxIndex/GetFloorGoods/?callback=?&cId=7&floorId=297");
             new fruitL().init($("#meatList"), "http://www.sfbest.com/ajaxIndex/GetFloorGoods/?callback=?&floorId=301");
             new fruitL().init($("#foodList"), "http://www.sfbest.com/ajaxIndex/GetFloorGoods/?callback=?&floorId=357");
@@ -33,26 +34,32 @@ require(['scripts/config.js'], function () { //加载配置文件
             //模糊搜索功能
             vagues.init($("#searchText"));
             
+            //加载优选必买数据
             needs.init($("#bbig"));
 
+            //头部二级菜单
             $(".fr").nav();
 
+            //左侧二级菜单
             $("#booksort").nav();
 
+            //加载限时抢购数据
             times.init($("#timeLimit"));
 
             //倒计时功能
             counts.init([02, 59, 52], ["time1", "time2", "time3"]);
 
+            //加载用户反馈数据
             $.getJSON("http://www.sfbest.com/ajax/GetHotSun/?callback=?", function (res) {
                 $("#share").html(res.data);
             });
 
+            //加载底部数据
             new foots().init($("#shopp"), $("#gives"), $("#pay"), $("#sell"), $("#seller"));
 
+            //回到顶部
             new scrollTo().init($("#scrollTOP"), $("#moveLeft"), $(".moveL"));
 
             $(".lists").cul();
-
         })
 })

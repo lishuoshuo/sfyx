@@ -32,6 +32,7 @@ define(["jquery"], function () {
             if (!this.res) {
                 this.res = res;
             }
+            
             var rendringArr;
             //每页最多可加载16个商品
             rendringArr = this.res.slice(this.index * 16, (this.index + 1) * 16);
@@ -40,7 +41,7 @@ define(["jquery"], function () {
                 html += '<li>' +
                     '<div class="l-wrap">' +
                     '<div class="pic">' +
-                    '<a href="##">' +
+                    '<a href="' + item.src + '">' +
                     '<img src="' + item.tag_img + '" alt="">' +
                     '</a>' +
                     '</div>' +
@@ -59,7 +60,7 @@ define(["jquery"], function () {
                     '<span>+</span>' +
                     '</div>' +
                     '<div class="p-btn">' +
-                    '<a href="##">加入购物车</a>' +
+                    '<a href="'+item.src+'" class="btns" data-id="'+item.eid+'">加入购物车</a>' +
                     '</div>' +
                     '</div>' +
                     '</div>' +

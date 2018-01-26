@@ -20,6 +20,9 @@ requirejs.config({
         "magnify":"scripts/magnify",
         "banner":"scripts/jquery.supperBanner",
         "logins":"scripts/logins",
-        "vague":"scripts/vague"
+        "vague":"scripts/vague",
+        "shoppingcart":"scripts/shoppingcart",//购物车
+        "cookie":"scripts/jquery.cookie"
+
     }
 })
